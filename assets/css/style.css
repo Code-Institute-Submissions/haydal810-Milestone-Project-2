@@ -1,0 +1,11 @@
+/* --style.css-- */
+
+.backgroundimage {
+    background-color: #3498db; /* --light blue-- */
+    background: url('assets/images/clouds.jpg') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
