@@ -27,8 +27,33 @@
     margin: 20px;
     background-size: cover;
 
-
 }
+
+@media only screen and (min-width: 768px) {
+    .card-1 {
+        height: 200px;
+        padding: 25px;
+        margin: 10px;
+    }
+}
+
+@media only screen and (min-width: 940px) {
+    .card-1 {
+        height: 300px;
+        padding: 15px;
+        margin: 5px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .card-1 {
+        height: 400px;
+        padding: 10px;
+        margin: 5px;
+    }
+}
+
+
 
 .card-2 {
 
@@ -39,6 +64,31 @@
     margin: 20px;
     background-size: cover;
 }
+
+@media only screen and (min-width: 768px) {
+    .card-2 {
+        height: 200px;
+        padding: 25px;
+        margin: 10px;
+    }
+}
+
+@media only screen and (min-width: 940px) {
+    .card-2 {
+        height: 300px;
+        padding: 15px;
+        margin: 5px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .card-2 {
+        height: 400px;
+        padding: 10px;
+        margin: 5px;
+    }
+}
+
 
 .card-3 {
 
@@ -51,13 +101,38 @@
 
 }
 
+@media only screen and (min-width: 768px) {
+    .card-3 {
+        height: 200px;
+        padding: 25px;
+        margin: 10px;
+    }
+}
+
+@media only screen and (min-width: 940px) {
+    .card-3 {
+        height: 300px;
+        padding: 15px;
+        margin: 5px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .card-3 {
+        height: 400px;
+        padding: 10px;
+        margin: 5px;
+    }
+}
+
+
 .col-button {
     text-align: center;
     margin-top: 25px;
     margin-bottom: 50px;
     }
 
-/* Advice Text to appear on smaller devices only */
+/* --Advice Text to appear on smaller devices only-- */
 
 .advice-text {
     background-color: red;
@@ -74,10 +149,22 @@
     }
 }
 
-/* Row for Cards to only appear on 400px and wider devices */
+/* --Row for Cards to only appear on 400px and wider devices-- */
 
 @media only screen and (max-width: 400px) {
     .row-disappear {
         display: none;
     }
 }
+
+/* --Row for action buttons & score-- */
+
+@media only screen and (min-width: 940px) {
+    .action-row {
+        padding: 50px;
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+}
+
+
