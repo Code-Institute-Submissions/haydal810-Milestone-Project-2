@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    <title>Guess the Animal Game</title>
+    <title>Pick the Animal Game | by Dave810</title>
 </head>
 
 <body>
@@ -16,8 +16,11 @@
         <!-- Welcome Text Here -->
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-12 text-center">
-                    <p><strong>Guess the Animal | by Dave810</strong></p>
+                <div id="game-title" class="col-12 text-center">
+                    <p><strong>Pick the Animal | by <a href="https://www.linkedin.com/in/david-hayden-668412180/" target="_blank">Dave810</a></strong></p>
+                </div>
+                <div id="question" style="display:none;">
+                    <p><strong>Choose an Animal?</strong></p>
                 </div>
             </div>
             <!-- Advice Text regarding best viewed in Landscape, appears on devices width 401px and below -->
@@ -28,23 +31,25 @@
             </div>
             <div class="row row-disappear justify-content-between">
                 <!-- FIRST CARD -->
-                <div class="col-2 col-md-3 card-1">
+                <div id="card1" onclick="myFunction1()" class="col-2 col-md-3 card-1">
                 </div>
                 <!-- SECOND CARD -->
-                <div class="col-2 col-md-3 card-2">
+                <div id="card2" onclick="myFunction2()" class="col-2 col-md-3 card-2">
                 </div>
                 <!-- THIRD CARD -->
-                <div class="col-2 col-md-3 card-3">
+                <div id="card3" onclick="myFunction3()" class="col-2 col-md-3 card-3">
                 </div>
             </div>
             <div class="row row-disappear justify-content-around action-row">
+                <!-- Score Column -->
                 <div class="col-2 col-button">
                     <div>Score: 000</div>
                 </div>
+                <!-- Action Button Column -->
                 <div class="col-4 col-button">
-                    <button type="button" class="btn btn-success btn-block">Press Here for Animal Sound</button>
+                    <button onclick="buttonQuestion()" type="button" class="btn btn-success action-button">Press Here to<br>Play</button>
                 </div>
-
+                <!-- Reset Game Button Column -->
                 <div class="col-2 col-button">
                     <div>
                         <button type="button" class="btn btn-danger">Restart Game</button>
@@ -64,6 +69,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="assets/js/cards.js"></script>
+    <script src="assets/js/buttons.js"></script>
+
 </body>
 
 </html>

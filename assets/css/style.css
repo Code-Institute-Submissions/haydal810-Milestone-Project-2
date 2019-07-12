@@ -20,7 +20,7 @@
 /* --Animal Cards-- */
 
 .card-1 {
-    background: url('../images/chicken.jpg') no-repeat;
+    background: url('../images/hen.jpg') no-repeat;
     width: 100px;
     border: 5px solid red;
     padding: 50px;
@@ -37,7 +37,7 @@
     }
 }
 
-@media only screen and (min-width: 940px) {
+@media only screen and (min-width: 992px) {
     .card-1 {
         height: 300px;
         padding: 15px;
@@ -45,13 +45,20 @@
     }
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1200px) {
     .card-1 {
         height: 400px;
         padding: 10px;
         margin: 5px;
     }
 }
+
+/* --JS Onclick style class-- */
+
+.greenClass {
+    border: 5px solid green;
+}
+
 
 
 
@@ -73,7 +80,7 @@
     }
 }
 
-@media only screen and (min-width: 940px) {
+@media only screen and (min-width: 992px) {
     .card-2 {
         height: 300px;
         padding: 15px;
@@ -81,7 +88,7 @@
     }
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1200px) {
     .card-2 {
         height: 400px;
         padding: 10px;
@@ -109,7 +116,7 @@
     }
 }
 
-@media only screen and (min-width: 940px) {
+@media only screen and (min-width: 992px) {
     .card-3 {
         height: 300px;
         padding: 15px;
@@ -117,7 +124,7 @@
     }
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1200px) {
     .card-3 {
         height: 400px;
         padding: 10px;
@@ -143,15 +150,15 @@
 
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 480px) {
     .advice-text {
         display: none;
     }
 }
 
-/* --Row for Cards to only appear on 400px and wider devices-- */
+/* --Row for Cards to only appear on 480px and wider devices-- */
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
     .row-disappear {
         display: none;
     }
@@ -159,12 +166,15 @@
 
 /* --Row for action buttons & score-- */
 
-@media only screen and (min-width: 940px) {
+@media only screen and (min-width: 992px) {
     .action-row {
         padding: 50px;
         margin-top: 150px;
         margin-bottom: 150px;
     }
 }
+
+/* --TBA-- */
+
 
 
