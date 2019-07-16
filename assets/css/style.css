@@ -1,7 +1,7 @@
 /* --Background Image-- */
 
 .cloud-background {
-    background: url('../images/clouds.jpg') no-repeat;
+    background-image: url('../images/clouds.jpg');
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -17,116 +17,57 @@
     color: #fafafa;
 }
 
-/* --Animal Cards-- */
+/* --Animal Cards Row-- */
+
+.card-row {
+    height: 150px;
+}
+
+/* --CARD 1-- */
 
 .card-1 {
-    background: url('../images/hen.jpg') no-repeat;
-    width: 100px;
-    border: 5px solid yellow;
-    padding: 50px;
-    margin: 20px;
+
     background-size: cover;
+    text-align: center;
+    overflow: hidden;
 
 }
 
-@media only screen and (min-width: 768px) {
-    .card-1 {
-        height: 200px;
-        padding: 25px;
-        margin: 10px;
-    }
+.card-1 img {
+    height: 40vh;
+    width: 100%;
 }
 
-@media only screen and (min-width: 992px) {
-    .card-1 {
-        height: 300px;
-        padding: 15px;
-        margin: 5px;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    .card-1 {
-        height: 400px;
-        padding: 10px;
-        margin: 5px;
-    }
-}
-
-/* --TBA-- */
-
-
-
-
+/* --CARD 2-- */
 
 .card-2 {
 
-    background: url('../images/cow.jpg') no-repeat;
-    width: 100px;
-    border: 5px solid yellow;
-    padding: 50px;
-    margin: 20px;
     background-size: cover;
+    text-align: center;
+    overflow: hidden;
+
 }
 
-@media only screen and (min-width: 768px) {
-    .card-2 {
-        height: 200px;
-        padding: 25px;
-        margin: 10px;
-    }
+.card-2 img {
+    height: 40vh;
+    width: 100%;
 }
 
-@media only screen and (min-width: 992px) {
-    .card-2 {
-        height: 300px;
-        padding: 15px;
-        margin: 5px;
-    }
-}
 
-@media only screen and (min-width: 1200px) {
-    .card-2 {
-        height: 400px;
-        padding: 10px;
-        margin: 5px;
-    }
-}
-
+/* --CARD 3-- */
 
 .card-3 {
 
-    background: url('../images/horse.jpg') no-repeat;
-    width: 100px;
-    border: 5px solid yellow;
-    padding: 50px;
-    margin: 20px;
     background-size: cover;
+    text-align: center;
+    overflow: hidden;
 
 }
 
-@media only screen and (min-width: 768px) {
-    .card-3 {
-        height: 200px;
-        padding: 25px;
-        margin: 10px;
-    }
-}
+.card-3 img {
+    height: 40vh;
+    width: 100%;
 
-@media only screen and (min-width: 992px) {
-    .card-3 {
-        height: 300px;
-        padding: 15px;
-        margin: 5px;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    .card-3 {
-        height: 400px;
-        padding: 10px;
-        margin: 5px;
-    }
 }
 
 
@@ -134,7 +75,7 @@
     text-align: center;
     margin-top: 15px;
     margin-bottom: 50px;
-    }
+}
 
 /* --Advice Text to appear on smaller devices only-- */
 
@@ -163,7 +104,7 @@
 
 /* --Row for action buttons & score-- */
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 870px) {
     .action-row {
         padding: 50px;
         margin-top: 150px;
@@ -172,6 +113,3 @@
 }
 
 /* --TBA-- */
-
-
-

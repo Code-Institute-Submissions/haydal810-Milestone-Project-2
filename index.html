@@ -29,30 +29,32 @@
                     <p><strong>This game is best played in Landscape, on Mobile Devices.<br> Please turn mobile device to Landscape. </strong></p>
                 </div>
             </div>
-            <div class="row row-disappear justify-content-between">
+            <div class="row row-disappear justify-content-between card-row">
                 <!-- FIRST CARD -->
-                <div id="card1" onclick="myFunction1()" class="col-2 col-md-3 card-1">
+                <div id="card1" class="col-3 card-1">
                 </div>
                 <!-- SECOND CARD -->
-                <div id="card2" onclick="myFunction2()" class="col-2 col-md-3 card-2">
+                <div id="card2" class="col-3 card-2">
                 </div>
                 <!-- THIRD CARD -->
-                <div id="card3" onclick="myFunction3()" class="col-2 col-md-3 card-3">
+                <div id="card3" class="col-3 card-3">
                 </div>
             </div>
             <div class="row row-disappear justify-content-around action-row">
                 <!-- Score Column -->
                 <div class="col-2 col-button">
-                    <div>Score: 000</div>
+                    <div>
+                        <button onclick="buttoncardShuffle()" type="button" class="btn btn-primary">Shuffle Cards</button>
+                    </div>
                 </div>
                 <!-- Action Button Column -->
                 <div class="col-4 col-button">
-                    <button onclick="buttonQuestion()" type="button" class="btn btn-success action-button">Press Here to<br>Play<br>Animal</button>
+                    <button onclick="buttonQuestion()" type="button" class="btn btn-success action-button">Press Here to<br>Play<br>Animal Sound</button>
                 </div>
                 <!-- Reset Game Button Column -->
                 <div class="col-2 col-button">
                     <div>
-                        <button onClick="buttonRestart()" type="button" class="btn btn-danger">Restart Game</button>
+                        <button onclick="buttonRestart()" type="button" class="btn btn-danger">Restart Game</button>
                     </div>
                 </div>
             </div>
