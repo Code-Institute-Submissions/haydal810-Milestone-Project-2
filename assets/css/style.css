@@ -107,7 +107,7 @@
 @media only screen and (min-width: 580px) {
     .action-row {
         padding: 25px;
-        margin-top: 25px;
+        margin-top: 5px;
         margin-bottom: 150px;
     }
 }
