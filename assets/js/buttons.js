@@ -14,13 +14,6 @@ wronganswerSound.src = "assets/audio/incorrect-sound.mp3";
 var rightanswerSound = new Audio();
 rightanswerSound.src = "assets/audio/cheering.mp3";
 
-// Animal Sounds in an array:
-
-var animalsoundArray = new Array("cowSound", "henSound", "catSound", "dogSound", "horseSound");
-
-// Random Animal Sound selected from the array:	
-
-var randomSound = animalsoundArray[Math.floor(Math.random() * animalsoundArray.length)];
 
 // This is the onclick function, when action button is click on, it makes welcome text div disappear and and other div appear instead. Also plays a sound file. 
 
@@ -50,7 +43,7 @@ function buttoncardShuffle() {
 
 	// 3 random pictures generated:	
 
-	var animals = ['cow', 'hen', 'horse'];
+	var animals = ['cow', 'hen', 'horse', 'cat', 'bunny', 'dog', 'donkey', 'duck', 'lamb', 'pig', 'sheep', 'tractor'];
 	var imgs = [];
 
 	// Got this via help from Heather on Slack - the function that returns a string as a file path of the animal pic
