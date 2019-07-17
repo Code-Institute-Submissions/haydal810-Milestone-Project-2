@@ -1,13 +1,12 @@
 /* --Background Image-- */
 
 .cloud-background {
-    background-image: url('../images/clouds.jpg');
+    background-image: url('../images/bg image farm.jpg');
     background-size: cover;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
     position: relative;
-
+    
 }
 
 
@@ -138,4 +137,8 @@
 
 
 
-/* --TBA-- */
+/* Green Action Button */
+
+.text-button {
+    font-size: 15px;
+}

@@ -154,6 +154,7 @@ The two video clips on the "Outdoor Activities" page were sourced from Youtube:
 The photos used in this site were obtained from:
 
 pexels...animals, background
+background cartoon farm - vectorstock.com
 
 
 ### External CSS Code
