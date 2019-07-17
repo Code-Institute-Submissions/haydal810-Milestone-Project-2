@@ -6,42 +6,13 @@ function buttonRestart() {
 
 }
 
-// Variables declared, right/wrong answer sounds
-
-var wronganswerSound = new Audio();
-wronganswerSound.src = "assets/audio/incorrect-sound.mp3";
-
-var rightanswerSound = new Audio();
-rightanswerSound.src = "assets/audio/cheering.mp3";
-
-
-// This is the onclick function, when action button is click on, it makes welcome text div disappear and and other div appear instead. Also plays a sound file. 
-
-function buttonQuestion() {
-
-	//  1 random animal sound generated when green button is pressed:	
-
-	var cowSound = new Audio();
-	cowSound.src = "assets/audio/cow-bellow.mp3";
-
-	var henSound = new Audio();
-	henSound.src = "assets/audio/hen-sound.mp3";
-
-	var horseSound = new Audio();
-	horseSound.src = "assets/audio/horse-sound.mp3";
-
-	var animalsoundArray = new Array(cowSound, henSound, horseSound);
-
-	var randomSound = animalsoundArray[Math.floor(Math.random() * animalsoundArray.length)];
-
-	randomSound.play();
-}
+// This is the onclick function, for the shuffle button, blue button.
 
 function buttoncardShuffle() {
 	document.getElementById("game-title").style.display = "none";
 	document.getElementById("question").style.display = "block";
 
-	// 3 random pictures generated:	
+	// array of pictures:	
 
 	var animals = ['cow', 'hen', 'horse', 'cat', 'bunny', 'dog', 'donkey', 'duck', 'lamb', 'pig', 'sheep', 'tractor'];
 	var imgs = [];
@@ -58,7 +29,7 @@ function buttoncardShuffle() {
 	var randomPic3 = imgs[Math.floor(Math.random() * imgs.length)];
 
 
-	// The If / Return statements, ensure that no dublicates of pictures occur for each shuffle:	
+	// The If / Return statements, ensuring that no dublicates of pictures occur for each shuffle:	
 	
 	document.getElementById("card1").innerHTML = randomPic1;
 	if (randomPic1 === randomPic2) {
@@ -89,3 +60,48 @@ console.log(randomPic2);
 console.log(randomPic3);
 
 }
+
+// This is the onclick function, when green button is clicked on, it makes welcome text div disappear and and other div appear instead. Also plays a sound file. 
+
+function buttonQuestion() {
+
+	//  1 random animal sound generated when green button is pressed:	
+
+	var cowSound = new Audio();
+	cowSound.src = "assets/audio/cow-bellow.mp3";
+
+	var henSound = new Audio();
+	henSound.src = "assets/audio/hen-sound.mp3";
+
+	var horseSound = new Audio();
+	horseSound.src = "assets/audio/horse-sound.mp3";
+
+	var animalsoundArray = new Array(cowSound, henSound, horseSound);
+
+	var randomSound = animalsoundArray[Math.floor(Math.random() * animalsoundArray.length)];
+
+	randomSound.play();
+}
+
+// Variables declared, right/wrong answer sounds, not implemented yet...
+
+var wronganswerSound = new Audio();
+wronganswerSound.src = "assets/audio/incorrect-sound.mp3";
+
+var rightanswerSound = new Audio();
+rightanswerSound.src = "assets/audio/cheering.mp3";
+
+
+// This is the onclick function, when images are click on, but I need to match the pictures to the sound file played...?
+
+function redBox() {
+	document.getElementById("card1", "card2", "card3").style.border = "15px solid red";
+	wronganswerSound.play();
+}
+
+function greenBox() {
+	document.getElementById("card1", "card2", "card3").style.border = "15px solid green";
+	rightanswerSound.play();
+}
+
+
