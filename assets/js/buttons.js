@@ -1,3 +1,11 @@
+// This is the onclick function, when blue or green button is clicked
+
+function buttonClicktext() {
+	document.getElementById("game-title").style.display = "none";
+	document.getElementById("question").style.display = "block";
+}
+
+
 // This is the onclick function, (page refresh) for restart button
 
 function buttonRestart() {
@@ -9,15 +17,13 @@ function buttonRestart() {
 // This is the onclick function, for the shuffle button, blue button.
 
 function buttoncardShuffle() {
-	document.getElementById("game-title").style.display = "none";
-	document.getElementById("question").style.display = "block";
-
+	
 	// array of pictures:	
 
 	var animals = ['cow', 'hen', 'horse', 'cat', 'bunny', 'dog', 'donkey', 'duck', 'lamb', 'pig', 'sheep', 'tractor'];
 	var imgs = [];
 
-	// Got this via help from Heather on Slack - the function that returns a string as a file path of the animal pic
+	// This is the function thats creates a string of the file path of choosen animal pic
 
 	animals.forEach(function(animal) {
 		var string = '<img src="assets/images/' + animal + '.jpg">';
@@ -104,4 +110,10 @@ function greenBox() {
 	rightanswerSound.play();
 }
 
+
+// Using jQuery to start up the buttoncardShuffle function on page load
+
+document.addEventListener("DOMContentLoaded", function() {
+  buttoncardShuffle();
+});
 
