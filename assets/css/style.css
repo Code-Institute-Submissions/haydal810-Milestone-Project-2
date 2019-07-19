@@ -1,11 +1,12 @@
 /* --Background Image-- */
 
-.cloud-background {
+.farm-background {
     background-image: url('../images/bg image farm.jpg');
     background-size: cover;
     width: 100%;
     height: 100vh;
     position: relative;
+    overflow: hidden;
     
 }
 
