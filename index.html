@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/png" href="images/cow icon.png"/>
+    <link rel="icon" type="image/png" sizes="20x16" href="assets/images/favicons/dh-32x32.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
@@ -16,20 +16,25 @@
     <div class="container-fluid cloud-background">
         <!-- Welcome Text Here -->
         <div class="container-fluid">
-            <div class="row justify-content-center">
+            <div class="row justify-content-between">
                 <div id="game-title" class="col-12 text-center">
                     <p><strong>Pick the Animal | by <a href="https://www.linkedin.com/in/david-hayden-668412180/" target="_blank">Haydal810</a></strong></p>
                 </div>
-                <div id="question" style="display:none;">
+                <div id="question" style="display:none;" class="col-6">
                     <p><strong>Choose an Animal?</strong></p>
+                </div>
+                <div id="needHelp" style="display:none;" class="col-6 text-right">
+                    <button type="button" class="btn btn-warning btn-sm"><i class="far fa-smile"></i> Help?</button>
                 </div>
             </div>
             <!-- Advice Text regarding best viewed in Landscape, appears on devices width 401px and below ONLY -->
-            <div class="row justify-content-center advice-text">
-                <div class="col-12 text-center">
-                    <p>Welcome to<br>Pick the Animal<br>Game<br>This simple game is suitable for childern aged 3years +</p>
-                    <p>This game is best played in Landscape, on Mobile Devices.</p>
-                    <p><strong>Please turn mobile device to Landscape.</strong></p>
+            <div class="row justify-content-center advice-text text-white">
+                <div class="col-12 text-left">
+                    <p><i class="fas fa-gamepad fa-2x"></i></p>
+                    <p>Welcome to<br>Pick the Animal Game.<br>This simple game is suitable for childern aged 3years +</p>
+                    <p><strong><i class="far fa-play-circle fa-2x"></i><br>How to Play:<br>Match the Sound to the correct Animal Picture. Each correct answer scores 1 point.<br>There are 5 rounds.<br>Good Luck and Enjoy!</strong></p>
+                    <p><i class="fas fa-arrows-alt-h fa-2x"></i></p>
+                    <p><strong>Please turn mobile device to Landscape to begin.</strong></p>
                 </div>
             </div>
             <div class="row row-disappear justify-content-between card-row">
@@ -44,17 +49,17 @@
                 </div>
             </div>
             <div class="row row-disappear justify-content-around action-row">
-                <!-- Score Column -->
+                <!-- Shuffle (Blue) Button  -->
                 <div class="col-2 col-button">
                     <div>
-                        <button onclick="buttoncardShuffle();buttonClicktext()" type="button" class="btn btn-primary text-button"><i class="fas fa-random fa-2x"></i><br>Shuffle<br>Cards</button>
+                        <button onclick="buttoncardShuffle();buttonClicktext();shuffleSound()" type="button" class="btn btn-primary text-button"><i class="fas fa-random fa-2x"></i><br>Shuffle<br>Cards</button>
                     </div>
                 </div>
-                <!-- Action Button Column -->
+                <!-- Action (Red) Button  -->
                 <div class="col-8 col-button">
                     <button onclick="buttonQuestion();buttonClicktext()" type="button" class="btn btn-success action-button text-button"><i class="far fa-play-circle fa-2x"></i><br>Press Play<br>for<br>Animal Sound</button>
                 </div>
-                <!-- Reset Game Button Column -->
+                <!-- Reset Game (Green) Button  -->
                 <div class="col-2 col-button">
                     <div>
                         <button onclick="buttonRestart()" type="button" class="btn btn-danger text-button"><i class="fas fa-gamepad fa-2x"></i><br>Restart<br>Game</button>

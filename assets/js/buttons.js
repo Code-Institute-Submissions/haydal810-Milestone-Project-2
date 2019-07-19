@@ -1,9 +1,27 @@
+// Using jQuery to start up the buttoncardShuffle function on page load
+
+document.addEventListener("DOMContentLoaded", function() {
+	buttoncardShuffle();
+});
+
 // This is the onclick function, when blue or green button is clicked
 
 function buttonClicktext() {
 	document.getElementById("game-title").style.display = "none";
 	document.getElementById("question").style.display = "block";
+	document.getElementById("needHelp").style.display = "block";
 }
+
+// This is the onclick function, when user clicks on the "Need Help? Click Here"
+
+function buttonClicktext() {
+	document.getElementById("game-title").style.display = "none";
+	document.getElementById("question").style.display = "block";
+	document.getElementById("needHelp").style.display = "block";
+}
+
+
+
 
 
 // This is the onclick function, (page refresh) for restart button
@@ -17,8 +35,8 @@ function buttonRestart() {
 // This is the onclick function, for the shuffle button, blue button.
 
 function buttoncardShuffle() {
-	
-	// array of pictures:	
+
+	// array of animal pictures:	
 
 	var animals = ['cow', 'hen', 'horse', 'cat', 'bunny', 'dog', 'donkey', 'duck', 'lamb', 'pig', 'sheep', 'tractor'];
 	var imgs = [];
@@ -36,7 +54,7 @@ function buttoncardShuffle() {
 
 
 	// The If / Return statements, ensuring that no dublicates of pictures occur for each shuffle:	
-	
+
 	document.getElementById("card1").innerHTML = randomPic1;
 	if (randomPic1 === randomPic2) {
 		return buttoncardShuffle();
@@ -44,7 +62,7 @@ function buttoncardShuffle() {
 	if (randomPic1 === randomPic3) {
 		return buttoncardShuffle();
 	}
-	
+
 	document.getElementById("card2").innerHTML = randomPic2;
 	if (randomPic2 === randomPic1) {
 		return buttoncardShuffle();
@@ -52,7 +70,7 @@ function buttoncardShuffle() {
 	if (randomPic2 === randomPic3) {
 		return buttoncardShuffle();
 	}
-	
+
 	document.getElementById("card3").innerHTML = randomPic3;
 	if (randomPic3 === randomPic1) {
 		return buttoncardShuffle();
@@ -60,10 +78,12 @@ function buttoncardShuffle() {
 	if (randomPic3 === randomPic2) {
 		return buttoncardShuffle();
 	}
-	
-console.log(randomPic1);
-console.log(randomPic2);
-console.log(randomPic3);
+
+	// console.log(randomPic1);
+	//	console.log(randomPic2);
+	//	console.log(randomPic3);
+
+
 
 }
 
@@ -110,10 +130,10 @@ function greenBox() {
 	rightanswerSound.play();
 }
 
+// This is the onclick function, for the shuffle button (blue button), to make sound effect when clicked.
 
-// Using jQuery to start up the buttoncardShuffle function on page load
-
-document.addEventListener("DOMContentLoaded", function() {
-  buttoncardShuffle();
-});
-
+function shuffleSound() {
+	var shuffleSound = new Audio();
+	shuffleSound.src = "assets/audio/shuffle.mp3";
+	shuffleSound.play();
+}
