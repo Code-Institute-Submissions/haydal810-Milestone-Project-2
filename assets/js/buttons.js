@@ -80,11 +80,9 @@ function buttoncardShuffle() {
 		return buttoncardShuffle();
 	}
 
-	// console.log(randomPic1);
+	//	console.log(randomPic1);
 	//	console.log(randomPic2);
 	//	console.log(randomPic3);
-
-
 
 }
 
