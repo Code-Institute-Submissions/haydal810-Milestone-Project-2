@@ -14,10 +14,11 @@ function buttonClicktext() {
 
 // This is the onclick function, when user clicks on the "Need Help? Click Here"
 
-function buttonClicktext() {
-	document.getElementById("game-title").style.display = "none";
-	document.getElementById("question").style.display = "block";
-	document.getElementById("needHelp").style.display = "block";
+function helpText() {
+	document.getElementById("animal-row").style.display = "none";
+	document.getElementById("button-row").style.display = "none";
+	document.getElementById("portrait-advice").style.display = "none";
+	document.getElementById("help-row").style.display = "block";
 }
 
 

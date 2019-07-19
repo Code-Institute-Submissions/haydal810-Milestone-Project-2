@@ -17,27 +17,34 @@
         <!-- Welcome Text Here -->
         <div class="container-fluid">
             <div class="row justify-content-between">
-                <div id="game-title" class="col-12 text-center">
+                <div id="game-title" class="col-8 text-left">
                     <p><strong>Pick the Animal | by <a href="https://www.linkedin.com/in/david-hayden-668412180/" target="_blank">Haydal810</a></strong></p>
                 </div>
                 <div id="question" style="display:none;" class="col-6">
                     <p><strong>Choose an Animal?</strong></p>
                 </div>
-                <div id="needHelp" style="display:none;" class="col-6 text-right">
-                    <button type="button" class="btn btn-warning btn-sm"><i class="far fa-smile"></i> Help?</button>
+                <div id="needHelp" class="col-4 text-right">
+                    <button type="button" onclick="helpText();" class="btn btn-warning btn-sm"><i class="far fa-smile"></i> How to Play</button>
                 </div>
             </div>
-            <!-- Advice Text regarding best viewed in Landscape, appears on devices width 401px and below ONLY -->
-            <div class="row justify-content-center advice-text text-white">
+            <!-- Help Text to User, appears when HELP button is clicked -->
+            <div id="help-row" style="display:none;" class="row justify-content-center advice-text text-white">
+                <div class="col-12 text-center">
+                    <p><strong><i class="far fa-play-circle fa-2x"></i><br>How to Play:<br>To begin, press the Green Button to make an animal sound. Match the Sound to the correct Animal Picture.<br>Each correct answer scores 1 point.<br>There are 5 rounds.<br>Good Luck and Enjoy!</strong></p>
+                    <p><button onclick="buttonRestart()" type="button" class="btn btn-success btn-sm">Play Game</button></p>
+                </div>
+            </div>
+            <!-- Advice Text to User about game, appears on devices width 401px and below ONLY -->
+            <div id="portrait-advice" class="row justify-content-center advice-text text-white">
                 <div class="col-12 text-center">
                     <p><i class="fas fa-gamepad fa-2x"></i></p>
                     <p>Welcome to<br>Pick the Animal Game.<br>This simple game is suitable for children aged 3years +</p>
-                    <p><strong><i class="far fa-play-circle fa-2x"></i><br>How to Play:<br>Match the Sound to the correct Animal Picture. Each correct answer scores 1 point.<br>There are 5 rounds.<br>Good Luck and Enjoy!</strong></p>
                     <p><i class="fas fa-arrows-alt-h fa-2x"></i></p>
                     <p><strong>Please turn mobile device to Landscape to begin.</strong></p>
                 </div>
             </div>
-            <div class="row row-disappear justify-content-between card-row">
+            <!-- Row for Animal Picture Cards  -->
+            <div id="animal-row" class="row row-disappear justify-content-between card-row">
                 <!-- FIRST CARD -->
                 <div id="card1" class="col-3 card-1">
                 </div>
@@ -48,7 +55,8 @@
                 <div id="card3" class="col-3 card-3">
                 </div>
             </div>
-            <div class="row row-disappear justify-content-around action-row">
+            <!-- Row for Buttons  -->
+            <div id="button-row" class="row row-disappear justify-content-around action-row">
                 <!-- Shuffle (Blue) Button  -->
                 <div class="col-2 col-button">
                     <div>
@@ -66,15 +74,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
-
-
     </div>
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
