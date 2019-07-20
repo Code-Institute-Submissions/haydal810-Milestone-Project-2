@@ -39,7 +39,7 @@ function buttoncardShuffle() {
 
 	// array of animal pictures:	
 
-	var animals = ['cow', 'hen', 'horse', 'cat', 'bunny', 'dog', 'donkey', 'duck', 'lamb', 'pig', 'sheep', 'tractor'];
+	var animals = ['frog', 'cow', 'hen', 'horse', 'cat', 'bunny', 'dog', 'donkey', 'duck', 'lamb', 'pig', 'tractor'];
 	var imgs = [];
 
 	// This is the function thats creates a string of the file path of choosen animal pic
