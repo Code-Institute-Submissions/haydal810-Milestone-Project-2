@@ -1,3 +1,44 @@
+// This is the onclick function, (page refresh) for restart button
+
+function buttonRestart() {
+
+	window.location.reload();
+
+}
+
+// onClick Function for buttons sound effects
+
+function buttoncardShufflesound() {
+
+	shuffleSound.play();
+}
+
+
+// Using jQuery ??? (Check this) to start up the newGame function on page load
+
+document.addEventListener("DOMContentLoaded", function() {
+	bluebuttonShuffle();
+});
+
+
+
+// This is the onclick function, when user clicks on the "How to Play" Button
+
+function helpText() {
+	document.getElementById("animal-row").style.display = "none";
+	document.getElementById("button-row").style.display = "none";
+	document.getElementById("portrait-advice").style.display = "none";
+	document.getElementById("help-row").style.display = "block";
+}
+
+// This is the onclick function, when blue or green button is clicked
+
+function buttonClicktext() {
+	document.getElementById("game-title").style.display = "none";
+	document.getElementById("question").style.display = "block";
+	document.getElementById("needHelp").style.display = "block";
+}
+
 // Declare ALL variables here, making them global...
 
 // Game Sounds variables here:
@@ -20,34 +61,34 @@ var catPic = '<img src="assets/images/cat.jpg">';
 catPic.hint = "This is a cat";
 
 var cowPic = '<img src="assets/images/cow.jpg">';
-cowPic.hint = "This is a cow"
+cowPic.hint = "This is a cow";
 
 var dogPic = '<img src="assets/images/dog.jpg">';
-dogPic.hint = "This is a dog"
+dogPic.hint = "This is a dog";
 
 var donkeyPic = '<img src="assets/images/donkey.jpg">';
-donkeyPic.hint = "This is a donkey"
+donkeyPic.hint = "This is a donkey";
 
 var duckPic = '<img src="assets/images/duck.jpg">';
-duckPic.hint = "This is a duck"
+duckPic.hint = "This is a duck";
 
 var frogPic = '<img src="assets/images/frog.jpg">';
-frogPic.hint = "This is a frog"
+frogPic.hint = "This is a frog";
 
 var henPic = '<img src="assets/images/hen.jpg">';
-henPic.hint = "This is a hen"
+henPic.hint = "This is a hen";
 
 var horsePic = '<img src="assets/images/horse.jpg">';
-horsePic.hint = "This is a horse"
+horsePic.hint = "This is a horse";
 
 var lambPic = '<img src="assets/images/lamb.jpg">';
-lambPic.hint = "This is a lamb"
+lambPic.hint = "This is a lamb";
 
 var pigPic = '<img src="assets/images/pig.jpg">';
-pigPic.hint = "This is a pig"
+pigPic.hint = "This is a pig";
 
 var tractorPic = '<img src="assets/images/tractor.jpg">';
-tractorPic.hint = "This is a tractor"
+tractorPic.hint = "This is a tractor";
 
 //  Animal Picture Array:
 
@@ -57,12 +98,29 @@ var randomPic1 = animals[Math.floor(Math.random() * animals.length)];
 var randomPic2 = animals[Math.floor(Math.random() * animals.length)];
 var randomPic3 = animals[Math.floor(Math.random() * animals.length)];
 
-document.getElementById("card1").innerHTML = randomPic1;
-document.getElementById("card2").innerHTML = randomPic2;
-document.getElementById("card3").innerHTML = randomPic3;
 
 
 
+
+
+function bluebuttonShuffle() {
+
+
+	document.getElementById("card1").style.border = "solid black";
+	document.getElementById("card2").style.border = "solid black";
+	document.getElementById("card3").style.border = "solid black";
+
+
+	document.getElementById("card1").innerHTML = randomPic1;
+	document.getElementById("card2").innerHTML = randomPic2;
+	document.getElementById("card3").innerHTML = randomPic3;
+
+	console.log(randomPic1);
+	console.log(randomPic2);
+	console.log(randomPic3);
+
+
+}
 
 
 //  Animal Sound Variables:	
@@ -100,15 +158,10 @@ var randomSound = animalsoundArray[Math.floor(Math.random() * animalsoundArray.l
 
 function greenbuttonAnimalsounds() {
 	randomSound.play();
+	console.log(randomSound.pic);
 }
 
 
-
-
-console.log(randomSound.pic);
-console.log(randomPic1);
-console.log(randomPic2);
-console.log(randomPic3);
 
 
 
@@ -156,71 +209,5 @@ function answer3() {
 		wronganswerSound.play();
 		console.log("card3 does not match the sound effect");
 	}
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Using jQuery to start up the buttoncardShuffle function on page load
-
-document.addEventListener("DOMContentLoaded", function() {
-	//buttoncardShuffle(); not needed on load anymore...
-});
-
-// This is the onclick function, (page refresh) for restart button
-
-function buttonRestart() {
-
-	window.location.reload();
-
-}
-
-// onClick Function for buttons sound effects
-
-function buttoncardShufflesound() {
-
-	shuffleSound.play();
-}
-
-
-
-// This is the onclick function, when blue or green button is clicked
-
-function buttonClicktext() {
-	document.getElementById("game-title").style.display = "none";
-	document.getElementById("question").style.display = "block";
-	document.getElementById("needHelp").style.display = "block";
-}
-
-// This is the onclick function, when user clicks on the "How to Play" Button
-
-function helpText() {
-	document.getElementById("animal-row").style.display = "none";
-	document.getElementById("button-row").style.display = "none";
-	document.getElementById("portrait-advice").style.display = "none";
-	document.getElementById("help-row").style.display = "block";
-}
-
-function buttonQuestion() {
-
-
 
 }
