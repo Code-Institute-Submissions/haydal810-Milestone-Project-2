@@ -154,11 +154,24 @@ var animalsoundArray = [cowSound, henSound, horseSound, dogSound, catSound];
 
 var randomSound = animalsoundArray[Math.floor(Math.random() * animalsoundArray.length)];
 
-
+// Green Button Function!!! 23/07
 
 function greenbuttonAnimalsounds() {
-	randomSound.play();
-	console.log(randomSound.pic);
+	if (randomPic1 === catPic || randomPic2 === catPic || randomPic3 === catPic) {
+		catSound.play();
+	}
+	else if (randomPic1 === dogPic || randomPic2 === dogPic || randomPic3 === dogPic) {
+		dogSound.play();
+	}
+	else if (randomPic1 === horsePic || randomPic2 === horsePic || randomPic3 === horsePic) {
+		horseSound.play();
+	}
+	else if (randomPic1 === henPic || randomPic2 === henPic || randomPic3 === henPic) {
+		henSound.play();
+	}
+	else if (randomPic1 === cowPic || randomPic2 === cowPic || randomPic3 === cowPic) {
+		cowSound.play();
+	}
 }
 
 
@@ -171,7 +184,7 @@ function greenbuttonAnimalsounds() {
 
 
 function answer1() {
-	if (randomSound.pic == randomPic1) {
+	if (randomSound.pic === randomPic1) {
 		document.getElementById("card1").style.border = "15px solid green";
 		rightanswerSound.play();
 		console.log("card1 matches the sound effect");
@@ -185,7 +198,7 @@ function answer1() {
 
 
 function answer2() {
-	if (randomSound.pic == randomPic2) {
+	if (randomSound.pic === randomPic2) {
 		document.getElementById("card2").style.border = "15px solid green";
 		rightanswerSound.play();
 		console.log("card2 does match the sound effect");
@@ -199,7 +212,7 @@ function answer2() {
 
 
 function answer3() {
-	if (randomSound.pic == randomPic3) {
+	if (randomSound.pic === randomPic3) {
 		document.getElementById("card3").style.border = "15px solid green";
 		rightanswerSound.play();
 		console.log("card3 matches the sound effect");
