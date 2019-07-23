@@ -14,7 +14,7 @@ function buttoncardShufflesound() {
 }
 
 
-// Using jQuery ??? (Check this) to start up the newGame function on page load
+// Using jQuery ??? (Check this...) to start up the newGame function on page load
 
 document.addEventListener("DOMContentLoaded", function() {
 	bluebuttonShuffle();
@@ -157,44 +157,69 @@ var randomSound = animalsoundArray[Math.floor(Math.random() * animalsoundArray.l
 
 
 
+function greenBox1() {
+	document.getElementById("card1").style.border = "15px solid green";
+	rightanswerSound.play();
+	console.log("Card1 matches the sound effect");
+}
+
+function redBox1() {
+	document.getElementById("card1").style.border = "15px solid red";
+	wronganswerSound.play();
+	console.log("Card1 does not match the sound effect");
+}
+
+function greenBox2() {
+	document.getElementById("card2").style.border = "15px solid green";
+	rightanswerSound.play();
+	console.log("Card2 matches the sound effect");
+}
+
+function redBox2() {
+	document.getElementById("card2").style.border = "15px solid red";
+	wronganswerSound.play();
+	console.log("Card2 does not match the sound effect");
+}
+
+function greenBox3() {
+	document.getElementById("card3").style.border = "15px solid green";
+	rightanswerSound.play();
+	console.log("Card3 matches the sound effect");
+}
+
+function redBox3() {
+	document.getElementById("card3").style.border = "15px solid red";
+	wronganswerSound.play();
+	console.log("Card3 does not match the sound effect");
+}
+
 
 
 function answer1() {
 	if (randomPic1 === catPic && catSound.play()) {
-		document.getElementById("card1").style.border = "15px solid green";
-		rightanswerSound.play();
-		console.log("Card1 matches the sound effect");
+		greenBox1();
 	}
 	else {
-		document.getElementById("card1").style.border = "15px solid red";
-		wronganswerSound.play();
-		console.log("Card1 does not match the sound effect");
+		redBox1();
 	}
 }
 
 function answer2() {
 	if (randomPic2 === catPic && catSound.play()) {
-		document.getElementById("card2").style.border = "15px solid green";
-		rightanswerSound.play();
-		console.log("Card2 matches the sound effect");
+		greenBox2();
 	}
 	else {
-		document.getElementById("card2").style.border = "15px solid red";
-		wronganswerSound.play();
-		console.log("Card2 does not match the sound effect");
+		redBox2();
 	}
 }
+
 
 function answer3() {
 	if (randomPic3 === catPic && catSound.play()) {
-		document.getElementById("card3").style.border = "15px solid green";
-		rightanswerSound.play();
-		console.log("Card3 matches the sound effect");
+		greenBox3();
 	}
 	else {
-		document.getElementById("card3").style.border = "15px solid red";
-		wronganswerSound.play();
-		console.log("Card3 does not match the sound effect");
+		redBox3();
 	}
 }
 
@@ -217,26 +242,26 @@ function answer3() {
 
 
 
-	// Green Button Function!!! 23/07
+// Green Button Function!!! 23/07
 
-	function greenbuttonAnimalsounds() {
-		if (randomPic1 === catPic || randomPic2 === catPic || randomPic3 === catPic) {
-			catSound.play();
-		}
-		else if (randomPic1 === dogPic || randomPic2 === dogPic || randomPic3 === dogPic) {
-			dogSound.play();
-		}
-		else if (randomPic1 === horsePic || randomPic2 === horsePic || randomPic3 === horsePic) {
-			horseSound.play();
-		}
-		else if (randomPic1 === henPic || randomPic2 === henPic || randomPic3 === henPic) {
-			henSound.play();
-		}
-		else if (randomPic1 === cowPic || randomPic2 === cowPic || randomPic3 === cowPic) {
-			cowSound.play();
-		}
+function greenbuttonAnimalsounds() {
+	if (randomPic1 === catPic || randomPic2 === catPic || randomPic3 === catPic) {
+		catSound.play();
 	}
+	else if (randomPic1 === dogPic || randomPic2 === dogPic || randomPic3 === dogPic) {
+		dogSound.play();
+	}
+	else if (randomPic1 === horsePic || randomPic2 === horsePic || randomPic3 === horsePic) {
+		horseSound.play();
+	}
+	else if (randomPic1 === henPic || randomPic2 === henPic || randomPic3 === henPic) {
+		henSound.play();
+	}
+	else if (randomPic1 === cowPic || randomPic2 === cowPic || randomPic3 === cowPic) {
+		cowSound.play();
+	}
+}
 
 
 
-	// the onclick match function...
+// the onclick match function...
