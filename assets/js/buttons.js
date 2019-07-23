@@ -101,7 +101,7 @@ var randomPic3 = animals[Math.floor(Math.random() * animals.length)];
 
 
 
-
+//  Blue button animal image shuffle
 
 function bluebuttonShuffle() {
 
@@ -155,7 +155,7 @@ var animalsoundArray = [cowSound, henSound, horseSound, dogSound, catSound];
 var randomSound = animalsoundArray[Math.floor(Math.random() * animalsoundArray.length)];
 
 
-
+// Onclick Functions for when user clicks on image. Image should go either red or green, depending on correct selection or not.
 
 function greenBox1() {
 	document.getElementById("card1").style.border = "15px solid green";
@@ -193,7 +193,7 @@ function redBox3() {
 	console.log("Card3 does not match the sound effect");
 }
 
-
+// Function to give user feedback if they have made right or wrong choice
 
 function answer1() {
 	if (randomPic1 === catPic && catSound.play()) {
@@ -242,7 +242,7 @@ function answer3() {
 
 
 
-// Green Button Function!!! 23/07
+// Green Button Function!!! This is supposed to assign a sound file to at least one of the picture images that appears each round.
 
 function greenbuttonAnimalsounds() {
 	if (randomPic1 === catPic || randomPic2 === catPic || randomPic3 === catPic) {
@@ -264,4 +264,4 @@ function greenbuttonAnimalsounds() {
 
 
 
-// the onclick match function...
+
