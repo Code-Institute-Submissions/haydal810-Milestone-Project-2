@@ -196,7 +196,7 @@ function redBox3() {
 // Function to give user feedback if they have made right or wrong choice
 
 function answer1() {
-	if (randomPic1 === catPic && catSound.play()) {
+	if (randomPic1 === catPic && catPic === catSound.pic) {
 		greenBox1();
 	}
 	else {
@@ -205,7 +205,7 @@ function answer1() {
 }
 
 function answer2() {
-	if (randomPic2 === catPic && catSound.play()) {
+	if (randomPic2 === catPic && catPic === catSound.pic) {
 		greenBox2();
 	}
 	else {
@@ -215,7 +215,7 @@ function answer2() {
 
 
 function answer3() {
-	if (randomPic3 === catPic && catSound.play()) {
+	if (randomPic3 === catPic && catPic === catSound.pic) {
 		greenBox3();
 	}
 	else {
