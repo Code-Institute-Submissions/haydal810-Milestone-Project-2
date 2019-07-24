@@ -161,52 +161,71 @@ function greenBox1() {
 	document.getElementById("card1").style.border = "15px solid green";
 	rightanswerSound.play();
 	console.log("Card1 matches the sound effect");
+	setTimeout(buttonRestart, 3900);
 }
 
 function redBox1() {
 	document.getElementById("card1").style.border = "15px solid red";
 	wronganswerSound.play();
 	console.log("Card1 does not match the sound effect");
+	setTimeout(buttonRestart, 3900);
 }
 
 function greenBox2() {
 	document.getElementById("card2").style.border = "15px solid green";
 	rightanswerSound.play();
 	console.log("Card2 matches the sound effect");
+	setTimeout(buttonRestart, 3900);
 }
 
 function redBox2() {
 	document.getElementById("card2").style.border = "15px solid red";
 	wronganswerSound.play();
 	console.log("Card2 does not match the sound effect");
+	setTimeout(buttonRestart, 3900);
 }
 
 function greenBox3() {
 	document.getElementById("card3").style.border = "15px solid green";
 	rightanswerSound.play();
 	console.log("Card3 matches the sound effect");
+	setTimeout(buttonRestart, 3900);
 }
 
 function redBox3() {
 	document.getElementById("card3").style.border = "15px solid red";
 	wronganswerSound.play();
 	console.log("Card3 does not match the sound effect");
+	setTimeout(buttonRestart, 3900);
 }
+
+
+
 
 // Function to give user feedback if they have made right or wrong choice
 
 function answer1() {
-	if (randomPic1 === catPic && catPic === catSound.pic) {
+	if ((randomPic1 === catPic && catPic === catSound.pic) || (randomPic1 === dogPic && dogPic === dogSound.pic) || (randomPic1 === cowPic && cowPic === cowSound.pic) || (randomPic1 === henPic && henPic === henSound.pic) ||(randomPic1 === horsePic && horsePic === horseSound.pic)) {
 		greenBox1();
 	}
 	else {
 		redBox1();
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
 
 function answer2() {
-	if (randomPic2 === catPic && catPic === catSound.pic) {
+	if ((randomPic2 === catPic && catPic === catSound.pic) || (randomPic2 === dogPic && dogPic === dogSound.pic) || (randomPic2 === cowPic && cowPic === cowSound.pic) || (randomPic2 === henPic && henPic === henSound.pic) ||(randomPic2 === horsePic && horsePic === horseSound.pic)) {
 		greenBox2();
+		
 	}
 	else {
 		redBox2();
@@ -215,8 +234,9 @@ function answer2() {
 
 
 function answer3() {
-	if (randomPic3 === catPic && catPic === catSound.pic) {
+	if ((randomPic3 === catPic && catPic === catSound.pic) || (randomPic3 === dogPic && dogPic === dogSound.pic) || (randomPic3 === cowPic && cowPic === cowSound.pic) || (randomPic3 === henPic && henPic === henSound.pic) ||(randomPic3 === horsePic && horsePic === horseSound.pic)) {
 		greenBox3();
+		
 	}
 	else {
 		redBox3();
