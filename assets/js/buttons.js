@@ -16,9 +16,9 @@ function buttoncardShufflesound() {
 
 // Using jQuery ??? (Check this...) to start up the newGame function on page load
 
-document.addEventListener("DOMContentLoaded", function() {
-	cardShuffle();
-});
+//document.addEventListener("DOMContentLoaded", function() {
+//	cardShuffle();
+//});
 
 
 
@@ -168,20 +168,22 @@ function randomNoRepeats(array) {
 	};
 }
 
-var animalChooser = randomNoRepeats([catPic, cowPic, dogPic, duckPic, frogPic, henPic, horsePic, sheepPic, pigPic]);
+
 
 
 
 
 function cardShuffle() {
 
-	document.getElementById("card1").style.border = "solid black";
-	document.getElementById("card2").style.border = "solid black";
-	document.getElementById("card3").style.border = "solid black";
+	var animalChooser = randomNoRepeats([catPic, cowPic, dogPic, duckPic, frogPic, henPic, horsePic, sheepPic, pigPic]);
 
 	document.getElementById("card1").innerHTML = animalChooser();
 	document.getElementById("card2").innerHTML = animalChooser();
 	document.getElementById("card3").innerHTML = animalChooser();
+
+	document.getElementById("card1").style.border = "solid black";
+	document.getElementById("card2").style.border = "solid black";
+	document.getElementById("card3").style.border = "solid black";
 
 	var cardOne = document.getElementById("card1").innerHTML
 	var cardTwo = document.getElementById("card2").innerHTML
@@ -195,62 +197,47 @@ function cardShuffle() {
 
 // Green Button Function - This is supposed to pick one of the 3 images and play a sound file matching it.
 
-var cardOne = document.getElementById("card1").innerHTML;
-var cardTwo = document.getElementById("card2").innerHTML;
-var cardThree = document.getElementById("card3").innerHTML;
-
-var cardArray = [cardOne, cardTwo, cardThree];
-
-var randomCard = cardArray[Math.floor(Math.random() * cardArray.length)];
-
-
-
 function greenbuttonAnimalsounds() {
 
-	
-	if (
-		(randomCard === '<img src="assets/images/cow.jpg">')
-	) {
+	var cardArray = [document.getElementById("card1").innerHTML, document.getElementById("card2").innerHTML, document.getElementById("card3").innerHTML];
+
+	var randomCard = cardArray[Math.floor(Math.random() * cardArray.length)];
+
+	console.log(randomCard);
+
+	if (randomCard === '<img src="assets/images/cow.jpg">') {
 		cowSound.play();
 	}
 	else if (
-		(randomCard === '<img src="assets/images/hen.jpg">')
-	) {
+		randomCard === '<img src="assets/images/hen.jpg">') {
 		henSound.play();
 	}
 	else if (
-		(randomCard === '<img src="assets/images/cat.jpg">')
-	) {
+		randomCard === '<img src="assets/images/cat.jpg">') {
 		catSound.play();
 	}
 	else if (
-		(randomCard === '<img src="assets/images/dog.jpg">')
-	) {
+		randomCard === '<img src="assets/images/dog.jpg">') {
 		dogSound.play();
 	}
 	else if (
-		(randomCard === '<img src="assets/images/horse.jpg">')
-	) {
+		randomCard === '<img src="assets/images/horse.jpg">') {
 		horseSound.play();
 	}
 	else if (
-		(randomCard === '<img src="assets/images/sheep.jpg">')
-	) {
+		randomCard === '<img src="assets/images/sheep.jpg">') {
 		sheepSound.play();
 	}
 	else if (
-		(randomCard === '<img src="assets/images/frog.jpg">')
-	) {
+		randomCard === '<img src="assets/images/frog.jpg">') {
 		frogSound.play();
 	}
 	else if (
-		(randomCard === '<img src="assets/images/pig.jpg">')
-	) {
+		randomCard === '<img src="assets/images/pig.jpg">') {
 		pigSound.play();
 	}
 	else if (
-		(randomCard === '<img src="assets/images/duck.jpg">')
-	) {
+		randomCard === '<img src="assets/images/duck.jpg">') {
 		duckSound.play();
 	}
 
