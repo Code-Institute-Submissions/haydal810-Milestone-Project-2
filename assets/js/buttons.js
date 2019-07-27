@@ -107,80 +107,6 @@ pigPic.hint = "This is a pig";
 var tractorPic = '<img src="assets/images/tractor.jpg">';
 tractorPic.hint = "This is a tractor";
 
-//  Animal Picture Array:
-
-var animals = [bunnyPic, catPic, cowPic, dogPic, donkeyPic, duckPic, frogPic, henPic, horsePic, sheepPic, pigPic, tractorPic];
-
-function randomNoRepeats(array) {
-	var copy = array.slice(0);
-	return function() {
-		if (copy.length < 1) { copy = array.slice(0); }
-		var index = Math.floor(Math.random() * copy.length);
-		var item = copy[index];
-		copy.splice(index, 1);
-		return item;
-	};
-}
-
-var animalChooser = randomNoRepeats([bunnyPic, catPic, cowPic, dogPic, donkeyPic, duckPic, frogPic, henPic, horsePic, sheepPic, pigPic, tractorPic]);
-
-var cardOne = animalChooser();
-var cardTwo = animalChooser();
-var cardThree = animalChooser();
-
-
-function cardShuffle() {
-
-	document.getElementById("card1").style.border = "solid black";
-	document.getElementById("card2").style.border = "solid black";
-	document.getElementById("card3").style.border = "solid black";
-
-	document.getElementById("card1").innerHTML = cardOne;
-	document.getElementById("card2").innerHTML = cardTwo;
-	document.getElementById("card3").innerHTML = cardThree;
-
-}
-
-// Green Button Function - This is supposed to pick one of the 3 images and play a sound file matching it.
-
-
-function greenbuttonAnimalsounds() {
-
-	var threeCards = [cardOne, cardTwo, cardThree];
-
-	console.log(threeCards);
-
-	if ((cardOne === '<img src="assets/images/cow.jpg">') || ((cardTwo === '<img src="assets/images/cow.jpg">')) || ((cardThree === '<img src="assets/images/cow.jpg">'))) {
-		cowSound.play();
-
-	}
-	else if ((cardOne === '<img src="assets/images/hen.jpg">') || ((cardTwo === '<img src="assets/images/hen.jpg">')) || ((cardThree === '<img src="assets/images/hen.jpg">'))) {
-		henSound.play();
-	}
-	else if ((cardOne === '<img src="assets/images/cat.jpg">') || ((cardTwo === '<img src="assets/images/cat.jpg">')) || ((cardThree === '<img src="assets/images/cat.jpg">'))) {
-		catSound.play();
-	}
-	else if ((cardOne === '<img src="assets/images/dog.jpg">') || ((cardTwo === '<img src="assets/images/dog.jpg">')) || ((cardThree === '<img src="assets/images/dog.jpg">'))) {
-		dogSound.play();
-	}
-	else if ((cardOne === '<img src="assets/images/horse.jpg">') || ((cardTwo === '<img src="assets/images/horse.jpg">')) || ((cardThree === '<img src="assets/images/horse.jpg">'))) {
-		horseSound.play();
-	}
-	else if ((cardOne === '<img src="assets/images/sheep.jpg">') || ((cardTwo === '<img src="assets/images/sheep.jpg">')) || ((cardThree === '<img src="assets/images/sheep.jpg">'))) {
-		sheepSound.play();
-	}
-	else if ((cardOne === '<img src="assets/images/frog.jpg">') || ((cardTwo === '<img src="assets/images/frog.jpg">')) || ((cardThree === '<img src="assets/images/frog.jpg">'))) {
-		frogSound.play();
-	}
-	else if ((cardOne === '<img src="assets/images/pig.jpg">') || ((cardTwo === '<img src="assets/images/pig.jpg">')) || ((cardThree === '<img src="assets/images/pig.jpg">'))) {
-		pigSound.play();
-	}
-	else if ((cardOne === '<img src="assets/images/duck.jpg">') || ((cardTwo === '<img src="assets/images/duck.jpg">')) || ((cardThree === '<img src="assets/images/duck.jpg">'))) {
-		duckSound.play();
-	}
-}
-
-
 //  Animal Sound Variables:	
 
 var cowSound = new Audio();
@@ -229,8 +155,112 @@ duckSound.pic = '<img src="assets/images/duck.jpg">';
 duckSound.hint = "This is a duck";
 
 
+//  Animal Picture Array:
 
-// Onclick Functions for when user clicks on image. Image should go either red or green, depending on correct selection or not.
+function randomNoRepeats(array) {
+	var copy = array.slice(0);
+	return function() {
+		if (copy.length < 1) { copy = array.slice(0); }
+		var index = Math.floor(Math.random() * copy.length);
+		var item = copy[index];
+		copy.splice(index, 1);
+		return item;
+	};
+}
+
+var animalChooser = randomNoRepeats([catPic, cowPic, dogPic, duckPic, frogPic, henPic, horsePic, sheepPic, pigPic]);
+
+
+
+
+function cardShuffle() {
+
+	document.getElementById("card1").style.border = "solid black";
+	document.getElementById("card2").style.border = "solid black";
+	document.getElementById("card3").style.border = "solid black";
+
+	document.getElementById("card1").innerHTML = animalChooser();
+	document.getElementById("card2").innerHTML = animalChooser();
+	document.getElementById("card3").innerHTML = animalChooser();
+
+	var cardOne = document.getElementById("card1").innerHTML
+	var cardTwo = document.getElementById("card2").innerHTML
+	var cardThree = document.getElementById("card3").innerHTML
+
+	console.log(cardOne);
+	console.log(cardTwo);
+	console.log(cardThree);
+
+}
+
+// Green Button Function - This is supposed to pick one of the 3 images and play a sound file matching it.
+
+var cardOne = document.getElementById("card1").innerHTML;
+var cardTwo = document.getElementById("card2").innerHTML;
+var cardThree = document.getElementById("card3").innerHTML;
+
+var cardArray = [cardOne, cardTwo, cardThree];
+
+var randomCard = cardArray[Math.floor(Math.random() * cardArray.length)];
+
+
+
+function greenbuttonAnimalsounds() {
+
+	
+	if (
+		(randomCard === '<img src="assets/images/cow.jpg">')
+	) {
+		cowSound.play();
+	}
+	else if (
+		(randomCard === '<img src="assets/images/hen.jpg">')
+	) {
+		henSound.play();
+	}
+	else if (
+		(randomCard === '<img src="assets/images/cat.jpg">')
+	) {
+		catSound.play();
+	}
+	else if (
+		(randomCard === '<img src="assets/images/dog.jpg">')
+	) {
+		dogSound.play();
+	}
+	else if (
+		(randomCard === '<img src="assets/images/horse.jpg">')
+	) {
+		horseSound.play();
+	}
+	else if (
+		(randomCard === '<img src="assets/images/sheep.jpg">')
+	) {
+		sheepSound.play();
+	}
+	else if (
+		(randomCard === '<img src="assets/images/frog.jpg">')
+	) {
+		frogSound.play();
+	}
+	else if (
+		(randomCard === '<img src="assets/images/pig.jpg">')
+	) {
+		pigSound.play();
+	}
+	else if (
+		(randomCard === '<img src="assets/images/duck.jpg">')
+	) {
+		duckSound.play();
+	}
+
+
+}
+
+
+
+
+// Onclick Functions for when user clicks on image. Image should go either red or green, depending which sound effect was...
 
 function greenBox1() {
 	document.getElementById("card1").style.border = "15px solid green";
@@ -284,8 +314,14 @@ function redBox3() {
 // Function to give user feedback if they have made right or wrong choice
 
 function answer1() {
-	if ((cardOne === catPic && catPic === catSound.pic) || (cardOne === dogPic && dogPic === dogSound.pic) || (cardOne === cowPic && cowPic === cowSound.pic) || (cardOne === henPic && henPic === henSound.pic) || (cardOne === horsePic && horsePic === horseSound.pic)) {
+	if (
+		(document.getElementById("card1").innerHTML === catPic && catPic === catSound.pic) || (document.getElementById("card1").innerHTML === dogPic && dogPic === dogSound.pic) || (document.getElementById("card1").innerHTML === cowPic && cowPic === cowSound.pic) || (document.getElementById("card1").innerHTML === henPic && henPic === henSound.pic) || (document.getElementById("card1").innerHTML === horsePic && horsePic === horseSound.pic) || (document.getElementById("card1").innerHTML === pigPic && pigPic === pigSound.pic) || (document.getElementById("card1").innerHTML === duckPic && duckPic === duckSound.pic) || (document.getElementById("card1").innerHTML === frogPic && frogPic === frogSound.pic) || (document.getElementById("card1").innerHTML === sheepPic && sheepPic === sheepSound.pic)
+	)
+
+	{
 		greenBox1();
+		redBox2();
+		redBox3();
 	}
 	else {
 		redBox1();
@@ -295,8 +331,14 @@ function answer1() {
 
 
 function answer2() {
-	if ((document.getElementById("card2").innerHTML === catPic && catPic === catSound.pic) || (document.getElementById("card2").innerHTML === dogPic && dogPic === dogSound.pic) || (document.getElementById("card2").innerHTML === cowPic && cowPic === cowSound.pic) || (document.getElementById("card2").innerHTML === henPic && henPic === henSound.pic) || (document.getElementById("card2").innerHTML === horsePic && horsePic === horseSound.pic)) {
+	if (
+		(document.getElementById("card2").innerHTML === catPic && catPic === catSound.pic) || (document.getElementById("card2").innerHTML === dogPic && dogPic === dogSound.pic) || (document.getElementById("card2").innerHTML === cowPic && cowPic === cowSound.pic) || (document.getElementById("card2").innerHTML === henPic && henPic === henSound.pic) || (document.getElementById("card2").innerHTML === horsePic && horsePic === horseSound.pic) || (document.getElementById("card2").innerHTML === pigPic && pigPic === pigSound.pic) || (document.getElementById("card2").innerHTML === duckPic && duckPic === duckSound.pic) || (document.getElementById("card2").innerHTML === frogPic && frogPic === frogSound.pic) || (document.getElementById("card2").innerHTML === sheepPic && sheepPic === sheepSound.pic)
+	)
+
+	{
 		greenBox2();
+		redBox1();
+		redBox3();
 	}
 	else {
 		redBox2();
@@ -304,8 +346,14 @@ function answer2() {
 }
 
 function answer3() {
-	if ((document.getElementById("card3").innerHTML === catPic && catPic === catSound.pic) || (document.getElementById("card3").innerHTML === dogPic && dogPic === dogSound.pic) || (document.getElementById("card3").innerHTML === cowPic && cowPic === cowSound.pic) || (document.getElementById("card3").innerHTML === henPic && henPic === henSound.pic) || (document.getElementById("card3").innerHTML === horsePic && horsePic === horseSound.pic)) {
+	if (
+		(document.getElementById("card3").innerHTML === catPic && catPic === catSound.pic) || (document.getElementById("card3").innerHTML === dogPic && dogPic === dogSound.pic) || (document.getElementById("card3").innerHTML === cowPic && cowPic === cowSound.pic) || (document.getElementById("card3").innerHTML === henPic && henPic === henSound.pic) || (document.getElementById("card3").innerHTML === horsePic && horsePic === horseSound.pic) || (document.getElementById("card3").innerHTML === pigPic && pigPic === pigSound.pic) || (document.getElementById("card3").innerHTML === duckPic && duckPic === duckSound.pic) || (document.getElementById("card3").innerHTML === frogPic && frogPic === frogSound.pic) || (document.getElementById("card3").innerHTML === sheepPic && sheepPic === sheepSound.pic)
+	)
+
+	{
 		greenBox3();
+		redBox1();
+		redBox2();
 	}
 	else {
 		redBox3();
