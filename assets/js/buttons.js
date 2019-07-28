@@ -13,21 +13,6 @@ function buttoncardShufflesound() {
 	shuffleSound.play();
 }
 
-// This function makes the You're Right / Your Wrong text block disappear
-
-function rightorwrongtextblockoff() {
-	document.getElementById("right-or-wrong").style.display = "none";
-}
-
-
-// Using jQuery ??? (Check this...) to start up the newGame function on page load
-
-//document.addEventListener("DOMContentLoaded", function() {
-//	cardShuffle();
-//});
-
-
-
 // This is the onclick function, when user clicks on the "How to Play" Button
 
 function helpText() {
@@ -70,43 +55,43 @@ catPic.src = '<img src="assets/images/cat.jpg">';
 var catSound = new Audio();
 catSound.src = "assets/audio/cat-meow.mp3";
 
-var cowPic = "Cow";
+var cowPic = '<img src="assets/images/cow.jpg">';
 cowPic.src = '<img src="assets/images/cow.jpg">';
 var cowSound = new Audio();
 cowSound.src = "assets/audio/cow-bellow.mp3";
 
-var dogPic = "Dog";
+var dogPic = '<img src="assets/images/dog.jpg">';
 dogPic.src = '<img src="assets/images/dog.jpg">';
 var dogSound = new Audio();
 dogSound.src = "assets/audio/dog-bark.mp3";
 
-var duckPic = "Duck";
+var duckPic = '<img src="assets/images/duck.jpg">';
 duckPic.src = '<img src="assets/images/duck.jpg">';
 var duckSound = new Audio();
 duckSound.src = "assets/audio/duck-sound.mp3";
 
-var frogPic = "Frog";
+var frogPic = '<img src="assets/images/frog.jpg">';
 frogPic.src = '<img src="assets/images/frog.jpg">';
 var frogSound = new Audio();
 frogSound.src = "assets/audio/frog-sound.mp3";
 
-var henPic = "Hen";
+var henPic = '<img src="assets/images/hen.jpg">';
 henPic.src = '<img src="assets/images/hen.jpg">';
 var henSound = new Audio();
 henSound.src = "assets/audio/hen-sound.mp3";
 
-var horsePic = "Horse";
+var horsePic = '<img src="assets/images/horse.jpg">';
 horsePic.src = '<img src="assets/images/horse.jpg">';
 var horseSound = new Audio();
 horseSound.src = "assets/audio/horse-sound.mp3";
 
-var sheepPic = "Sheep";
-sheepPic.src = "assets/audio/sheep-sound.mp3";
+var sheepPic = '<img src="assets/images/sheep.jpg">';
+sheepPic.src = '<img src="assets/images/sheep.jpg">';
 var sheepSound = new Audio();
 sheepSound.src = "assets/audio/sheep-sound.mp3";
 
-var pigPic = "Pig";
-pigPic.src = "assets/audio/pig-sound.mp3";
+var pigPic = '<img src="assets/images/pig.jpg">';
+pigPic.src = '<img src="assets/images/pig.jpg">';
 var pigSound = new Audio();
 pigSound.src = "assets/audio/pig-sound.mp3";
 
@@ -132,6 +117,7 @@ redButton.onclick = () => resetGame();
 greenButton.onclick = () => randomShuffle();
 cards.forEach(card => card.onclick = () => checkAnswer(event));
 
+
 function resetGame() {
 	buttonRestart()
 }
@@ -152,31 +138,31 @@ function randomShuffle() {
 	currentCard = cards[Math.floor(Math.random() * 3)].dataset.answer;
 	console.log("Current Card is: " + currentCard);
 
-	if (currentCard === "Hen") {
+	if (currentCard === '<img src="assets/images/hen.jpg">') {
 		henSound.play();
 	}
-	else if (currentCard === "Sheep") {
+	else if (currentCard === '<img src="assets/images/sheep.jpg">') {
 		sheepSound.play();
 	}
-	else if (currentCard === "Dog") {
+	else if (currentCard === '<img src="assets/images/dog.jpg">') {
 		dogSound.play();
 	}
-	else if (currentCard === "Cat") {
+	else if (currentCard === '<img src="assets/images/cat.jpg">') {
 		catSound.play();
 	}
-	else if (currentCard === "Duck") {
+	else if (currentCard === '<img src="assets/images/duck.jpg">') {
 		duckSound.play();
 	}
-	else if (currentCard === "Horse") {
+	else if (currentCard === '<img src="assets/images/horse.jpg">') {
 		horseSound.play();
 	}
-	else if (currentCard === "Pig") {
+	else if (currentCard === '<img src="assets/images/pig.jpg">') {
 		pigSound.play();
 	}
-	else if (currentCard === "Frog") {
+	else if (currentCard === '<img src="assets/images/frog.jpg">') {
 		frogSound.play();
 	}
-	else if (currentCard === "Cow") {
+	else if (currentCard === '<img src="assets/images/cow.jpg">') {
 		cowSound.play();
 	}
 	
@@ -191,10 +177,10 @@ function randomShuffle() {
 function checkAnswer(event) {
 	let card = event.target.dataset.answer;
 	if (card === currentCard) {
-		rightOrWrong.innerText = `You're Right!!! It was a ${currentCard}`;
+		rightOrWrong.innerText = "You're Right!!! Well Done!";
 		rightanswerSound.play();
 		setTimeout(randomShuffle, 3900);
-		setTimeout(rightorwrongtextblockoff, 3000)
+		
 	}
 	else {
 		rightOrWrong.innerText = `You're Wrong!!! Try Again `;
