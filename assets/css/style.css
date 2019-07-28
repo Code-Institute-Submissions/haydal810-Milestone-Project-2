@@ -30,9 +30,9 @@
     height: 130px;
 }
 
-/* --CARD 1-- */
+/* --All Cards-- */
 
-.card-1 {
+.card {
     text-align: center;
     overflow: hidden;
     border: solid black;
@@ -41,7 +41,7 @@
 
 }
 
-.card-1 img {
+.card img {
     height: 100%;
     width: 100%;
 }

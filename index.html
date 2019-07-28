@@ -21,7 +21,7 @@
                     <p class="title-margin"><strong>Pick the Animal | by <a href="https://www.linkedin.com/in/david-hayden-668412180/" target="_blank">Haydal810</a></strong></p>
                 </div>
                 <div id="turns-left" class="col-6 turnsleftcol">
-                    <p><strong>Turns Left: <span id="turnsLeftSpan">5</span></strong></p>
+                    <p><strong><span id="right-or-wrong"></span></strong></p>
                 </div>
                 <div id="needHelp" class="col-4 text-right">
                     <button type="button" id="how-to-play" class="btn btn-warning btn-sm"><i class="far fa-smile"></i> How to Play</button>
@@ -46,13 +46,13 @@
             <!-- Row for Animal Picture Cards  -->
             <div id="animal-row" class="row row-disappear justify-content-between card-row">
                 <!-- FIRST CARD -->
-                <div id="card1" class="col-3 card-1">
+                <div id="card1" class="col-3 card" data-answer="">
                 </div>
                 <!-- SECOND CARD -->
-                <div id="card2" class="col-3 card-2">
+                <div id="card2" class="col-3 card" data-answer="">
                 </div>
                 <!-- THIRD CARD -->
-                <div id="card3" class="col-3 card-3">
+                <div id="card3" class="col-3 card" data-answer="">
                 </div>
             </div>
             <!-- Row for Buttons  -->
@@ -65,12 +65,12 @@
                 </div>
                 <!-- Action (Green) Button  -->
                 <div class="col-8 col-button">
-                    <button id="greenbutton" type="button" class="btn btn-success action-button text-button"><i class="far fa-play-circle fa-2x"></i><br>Press Play<br>for<br>Animal Sound</button>
+                    <button id="greenButton" type="button" class="btn btn-success action-button text-button"><i class="far fa-play-circle fa-2x"></i><br>Press Play<br>for<br>Animal Sound</button>
                 </div>
                 <!-- Reset Game (Red) Button  -->
                 <div class="col-2 col-button">
                     <div>
-                        <button id="redbutton" type="button" class="btn btn-danger text-button"><i class="fas fa-gamepad fa-2x"></i><br>Restart<br>Game</button>
+                        <button id="redButton" type="button" class="btn btn-danger text-button"><i class="fas fa-gamepad fa-2x"></i><br>Restart<br>Game</button>
                     </div>
                 </div>
             </div>
