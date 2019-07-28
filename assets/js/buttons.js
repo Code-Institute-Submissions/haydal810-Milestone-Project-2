@@ -13,6 +13,12 @@ function buttoncardShufflesound() {
 	shuffleSound.play();
 }
 
+// This function makes the You're Right / Your Wrong text block disappear
+
+function rightorwrongtextblockoff() {
+	document.getElementById("right-or-wrong").style.display = "none";
+}
+
 
 // Using jQuery ??? (Check this...) to start up the newGame function on page load
 
@@ -43,7 +49,7 @@ function buttonClicktext() {
 }
 
 
-// Declare ALL variables here, making them global...
+// All global variables
 
 // Game Sounds variables here:
 
@@ -56,14 +62,10 @@ wronganswerSound.src = "assets/audio/incorrect-sound.mp3";
 var rightanswerSound = new Audio();
 rightanswerSound.src = "assets/audio/cheering.mp3";
 
-
-
-
-
 //  Animal Picture & Sound Variables:	
 
 
-var catPic = "Cat";
+var catPic = '<img src="assets/images/cat.jpg">';
 catPic.src = '<img src="assets/images/cat.jpg">';
 var catSound = new Audio();
 catSound.src = "assets/audio/cat-meow.mp3";
@@ -112,20 +114,20 @@ pigSound.src = "assets/audio/pig-sound.mp3";
 
 // Variables for ID's in Index.html
 
-
+let playgamehelpbutton = document.querySelector('#play-game');
 let redButton = document.querySelector('#redButton');
 let greenButton = document.querySelector('#greenButton');
 let blueButton = document.querySelector('#blueButton');
 
 let rightOrWrong = document.querySelector('#right-or-wrong');
 let cards = document.querySelectorAll('.card');
-let currentAnswer;
-let triesLeft = 5;
+let currentCard;
+let triesLeft = 5; // is this needed? 
 
 
 // Event Listeners
 
-
+playgamehelpbutton.onclick = () => resetGame();
 redButton.onclick = () => resetGame();
 greenButton.onclick = () => randomShuffle();
 cards.forEach(card => card.onclick = () => checkAnswer(event));
@@ -147,34 +149,34 @@ function randomShuffle() {
 	});
 
 	// assign the current Answer from one of the cards dataset values
-	currentAnswer = cards[Math.floor(Math.random() * 3)].dataset.answer;
-	console.log("Current Answer is: " + currentAnswer);
+	currentCard = cards[Math.floor(Math.random() * 3)].dataset.answer;
+	console.log("Current Card is: " + currentCard);
 
-	if (currentAnswer === "Hen") {
+	if (currentCard === "Hen") {
 		henSound.play();
 	}
-	else if (currentAnswer === "Sheep") {
+	else if (currentCard === "Sheep") {
 		sheepSound.play();
 	}
-	else if (currentAnswer === "Dog") {
+	else if (currentCard === "Dog") {
 		dogSound.play();
 	}
-	else if (currentAnswer === "Cat") {
+	else if (currentCard === "Cat") {
 		catSound.play();
 	}
-	else if (currentAnswer === "Duck") {
+	else if (currentCard === "Duck") {
 		duckSound.play();
 	}
-	else if (currentAnswer === "Horse") {
+	else if (currentCard === "Horse") {
 		horseSound.play();
 	}
-	else if (currentAnswer === "Pig") {
+	else if (currentCard === "Pig") {
 		pigSound.play();
 	}
-	else if (currentAnswer === "Frog") {
+	else if (currentCard === "Frog") {
 		frogSound.play();
 	}
-	else if (currentAnswer === "Cow") {
+	else if (currentCard === "Cow") {
 		cowSound.play();
 	}
 	
@@ -188,12 +190,15 @@ function randomShuffle() {
 // check answer function
 function checkAnswer(event) {
 	let card = event.target.dataset.answer;
-	if (card === currentAnswer) {
-		rightOrWrong.innerText = `You're Right!!! It was a ${currentAnswer}`;
-		
+	if (card === currentCard) {
+		rightOrWrong.innerText = `You're Right!!! It was a ${currentCard}`;
+		rightanswerSound.play();
+		setTimeout(randomShuffle, 3900);
+		setTimeout(rightorwrongtextblockoff, 3000)
 	}
 	else {
-		rightOrWrong.innerText = `You're Wrong!!! It was a ${currentAnswer}`;
+		rightOrWrong.innerText = `You're Wrong!!! Try Again `;
+		wronganswerSound.play();
 		
 	}
 
