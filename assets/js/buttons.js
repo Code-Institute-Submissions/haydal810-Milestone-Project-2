@@ -6,6 +6,13 @@ function buttonRestart() {
 
 }
 
+var playgameButton = document.getElementById("redbutton");
+playgameButton.addEventListener("click", buttonRestart);
+
+var playgame = document.getElementById("play-game");
+playgame.addEventListener("click", buttonRestart);
+
+
 // onClick Function for buttons sound effects
 
 function buttoncardShufflesound() {
@@ -31,13 +38,17 @@ function helpText() {
 	document.getElementById("help-row").style.display = "block";
 }
 
-// This is the onclick function, when blue or green button is clicked
+var helpButton = document.getElementById("how-to-play");
+helpButton.addEventListener("click", helpText);
+
+
+// This is the onclick function, when green button is clicked
 
 function buttonClicktext() {
 	document.getElementById("game-title").style.display = "none";
-	document.getElementById("question").style.display = "block";
-	document.getElementById("needHelp").style.display = "block";
+	document.getElementById("turns-left").style.display = "block";
 }
+
 
 // Declare ALL variables here, making them global...
 
@@ -195,6 +206,12 @@ function cardShuffle() {
 
 }
 
+//  Blue Button Onclick function:
+
+var blueButton = document.getElementById("blueButton");
+blueButton.addEventListener("click", cardShuffle);
+
+
 // Green Button Function - This is supposed to pick one of the 3 images and play a sound file matching it.
 
 function greenbuttonAnimalsounds() {
@@ -207,6 +224,7 @@ function greenbuttonAnimalsounds() {
 
 	if (randomCard === '<img src="assets/images/cow.jpg">') {
 		cowSound.play();
+
 	}
 	else if (
 		randomCard === '<img src="assets/images/hen.jpg">') {
@@ -243,6 +261,9 @@ function greenbuttonAnimalsounds() {
 
 
 }
+
+var greenButton = document.getElementById("greenbutton");
+greenButton.addEventListener("click", (greenbuttonAnimalsounds, buttonClicktext))
 
 
 
@@ -301,14 +322,12 @@ function redBox3() {
 // Function to give user feedback if they have made right or wrong choice
 
 function answer1() {
-	if (
-		(document.getElementById("card1").innerHTML === catPic && catPic === catSound.pic) || (document.getElementById("card1").innerHTML === dogPic && dogPic === dogSound.pic) || (document.getElementById("card1").innerHTML === cowPic && cowPic === cowSound.pic) || (document.getElementById("card1").innerHTML === henPic && henPic === henSound.pic) || (document.getElementById("card1").innerHTML === horsePic && horsePic === horseSound.pic) || (document.getElementById("card1").innerHTML === pigPic && pigPic === pigSound.pic) || (document.getElementById("card1").innerHTML === duckPic && duckPic === duckSound.pic) || (document.getElementById("card1").innerHTML === frogPic && frogPic === frogSound.pic) || (document.getElementById("card1").innerHTML === sheepPic && sheepPic === sheepSound.pic)
-	)
+	if (document.getElementById("card2").innerHTML
 
-	{
+
+	) {
 		greenBox1();
-		redBox2();
-		redBox3();
+
 	}
 	else {
 		redBox1();
@@ -324,8 +343,7 @@ function answer2() {
 
 	{
 		greenBox2();
-		redBox1();
-		redBox3();
+
 	}
 	else {
 		redBox2();
@@ -339,8 +357,7 @@ function answer3() {
 
 	{
 		greenBox3();
-		redBox1();
-		redBox2();
+
 	}
 	else {
 		redBox3();
