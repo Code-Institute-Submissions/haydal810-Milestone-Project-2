@@ -130,7 +130,7 @@ function randomShuffle() {
 	// set card values
 	cards.forEach(card => {
 		let value = arr[Math.floor(Math.random() * arr.length)];
-		card.innerText = value;
+		card.innerHTML = value;
 		card.dataset.answer = value;
 	});
 
