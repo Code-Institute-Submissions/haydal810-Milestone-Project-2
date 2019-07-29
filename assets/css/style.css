@@ -107,6 +107,13 @@
 
 }
 
+.rightorwrong-text p {
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    margin-bottom: 1px
+}
+
+
 @media only screen and (min-width: 480px) {
     .advice-text {
         display: none;
