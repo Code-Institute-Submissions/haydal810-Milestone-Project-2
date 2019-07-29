@@ -6,13 +6,6 @@ function buttonRestart() {
 
 }
 
-// onClick Function for buttons sound effects
-
-function buttoncardShufflesound() {
-
-	shuffleSound.play();
-}
-
 // This is the onclick function, when user clicks on the "How to Play" Button
 
 function helpText() {
@@ -36,7 +29,6 @@ function gameoverText() {
 	taadaaSound.play();
 }
 
-
 // Event Listeners for onclick functions 
 
 var helpButton = document.getElementById("how-to-play");
@@ -45,7 +37,6 @@ helpButton.addEventListener("click", helpText);
 var playagainButton = document.getElementById("play-again");
 playagainButton.addEventListener("click", buttonRestart);
 
-
 // This is the onclick function, when green button is clicked
 
 function buttonClicktext() {
@@ -53,16 +44,12 @@ function buttonClicktext() {
 	document.getElementById("turns-left").style.display = "block";
 }
 
-
 // All global variables
 
 // Game Sounds variables here:
 
 var taadaaSound = new Audio();
 taadaaSound.src = "assets/audio/Taadaasound.mp3";
-
-var shuffleSound = new Audio();
-shuffleSound.src = "assets/audio/shuffle.mp3";
 
 var wronganswerSound = new Audio();
 wronganswerSound.src = "assets/audio/incorrect-sound.mp3";
@@ -72,9 +59,7 @@ rightanswerSound.src = "assets/audio/cheering.mp3";
 
 //  Animal Picture & Sound Variables:	
 
-
 var catPic = '<img src="assets/images/cat.jpg">';
-catPic.answer = "Cat";
 catPic.src = '<img src="assets/images/cat.jpg">';
 var catSound = new Audio();
 catSound.src = "assets/audio/cat-meow.mp3";
@@ -119,8 +104,6 @@ pigPic.src = '<img src="assets/images/pig.jpg">';
 var pigSound = new Audio();
 pigSound.src = "assets/audio/pig-sound.mp3";
 
-
-
 // Variables for ID's in index.html
 
 let playgamehelpbutton = document.querySelector('#play-game');
@@ -131,84 +114,58 @@ let rightOrWrong = document.querySelector('#right-or-wrong');
 let cards = document.querySelectorAll('.card');
 let turnsLeftSpan = document.querySelector('#turnsLeftSpan');
 let currentCard;
-let turnsLeft = 5;
-
 
 // Event Listeners
 
-playgamehelpbutton.onclick = () => resetGame();
-redButton.onclick = () => resetGame();
+playgamehelpbutton.onclick = () => buttonRestart();
+redButton.onclick = () => buttonRestart();
 greenButton.onclick = () => randomShuffle();
 cards.forEach(card => card.onclick = () => checkAnswer(event));
-
-// reset game function - for red button
-
-function resetGame() {
-	buttonRestart();
-}
 
 // randomShuffle function - This shuffles the Animal Cards from the array
 
 function randomShuffle() {
 	let arr = [catPic, cowPic, dogPic, duckPic, frogPic, henPic, horsePic, sheepPic, pigPic];
+	let arrCopy = [...arr];
+	let turnsLeft = 5;
 
-	if (turnsLeft <= 0) {
-		turnsLeftSpan.innerText = 'GAME OVER!';
-		gameoverText();
-	}
-	else {
+	return () => {
+
+		// if the array is empty, start a new one
+		if (!arr.length) {
+			arr = [...arrCopy];
+		}
+
+
+		// Check to see if the game is over
+		if (turnsLeft <= 0) {
+			gameoverText();
+			
+		}
+
 		turnsLeft--;
 		turnsLeftSpan.innerText = turnsLeft;
 
-		// set card values
+		// choose 3 random indexs and remove from array
 		cards.forEach(card => {
-			let value = arr[Math.floor(Math.random() * arr.length)];
+			let index = Math.floor(Math.random() * arr.length);
+			let value = arr[index];
+			card.innerHTML = value;
 			card.innerText = value;
 			card.dataset.answer = value;
-			card.innerHTML = value;
-
+			arr.splice(index, 1);
 		});
 
-		// Assign the current Animal card from one of the cards dataset values
+		// currentCard
 		currentCard = cards[Math.floor(Math.random() * 3)].dataset.answer;
-		console.log("Current Card is: " + currentCard);
-
-		switch (currentCard) {
-			case henPic:
-				henSound.play();
-				break;
-			case catPic:
-				catSound.play();
-				break;
-			case dogPic:
-				dogSound.play();
-				break;
-			case cowPic:
-				cowSound.play();
-				break;
-			case duckPic:
-				duckSound.play();
-				break;
-			case frogPic:
-				frogSound.play();
-				break;
-			case horsePic:
-				horseSound.play();
-				break;
-			case sheepPic:
-				sheepSound.play();
-				break;
-			case pigPic:
-				pigSound.play();
-		}
-	}
+		console.log(currentCard);
+	};
 }
-
 
 // check answer function
 function checkAnswer(event) {
 	let card = event.currentTarget.dataset.answer;
-	if (card === currentCard) {
+	if (card == currentCard) {
 		rightOrWrong.innerText = "You're Right, Well Done!";
 		rightanswerSound.play();
 		setTimeout(randomShuffle, 3900);
