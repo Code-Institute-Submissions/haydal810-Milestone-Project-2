@@ -178,7 +178,7 @@ function randomShuffle() {
 
 // check answer function
 function checkAnswer(event) {
-	let card = event.target.dataset.answer;
+	let card = event.currentTarget.dataset.answer;
 	if (card === currentCard) {
 		rightOrWrong.innerText = "You're Right!!! Well Done!";
 		rightanswerSound.play();
