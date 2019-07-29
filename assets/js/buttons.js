@@ -114,12 +114,12 @@ pigSound.src = "assets/audio/pig-sound.mp3";
 
 
 
-// Variables for ID's in Index.html
+// Variables for ID's in index.html
 
 let playgamehelpbutton = document.querySelector('#play-game');
 let redButton = document.querySelector('#redButton');
 let greenButton = document.querySelector('#greenButton');
-let blueButton = document.querySelector('#blueButton');
+
 
 let rightOrWrong = document.querySelector('#right-or-wrong');
 let cards = document.querySelectorAll('.card');
