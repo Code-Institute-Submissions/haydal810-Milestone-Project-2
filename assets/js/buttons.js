@@ -169,39 +169,41 @@ function randomShuffle() {
 
 		});
 
-		// assign the current Answer from one of the cards dataset values
+		// Assign the current Animal card from one of the cards dataset values
 		currentCard = cards[Math.floor(Math.random() * 3)].dataset.answer;
 		console.log("Current Card is: " + currentCard);
 
-		if (currentCard === '<img src="assets/images/hen.jpg">') {
-			henSound.play();
-		}
-		else if (currentCard === '<img src="assets/images/sheep.jpg">') {
-			sheepSound.play();
-		}
-		else if (currentCard === '<img src="assets/images/dog.jpg">') {
-			dogSound.play();
-		}
-		else if (currentCard === '<img src="assets/images/cat.jpg">') {
-			catSound.play();
-		}
-		else if (currentCard === '<img src="assets/images/duck.jpg">') {
-			duckSound.play();
-		}
-		else if (currentCard === '<img src="assets/images/horse.jpg">') {
-			horseSound.play();
-		}
-		else if (currentCard === '<img src="assets/images/pig.jpg">') {
-			pigSound.play();
-		}
-		else if (currentCard === '<img src="assets/images/frog.jpg">') {
-			frogSound.play();
-		}
-		else if (currentCard === '<img src="assets/images/cow.jpg">') {
-			cowSound.play();
+		switch (currentCard) {
+			case henPic:
+				henSound.play();
+				break;
+			case catPic:
+				catSound.play();
+				break;
+			case dogPic:
+				dogSound.play();
+				break;
+			case cowPic:
+				cowSound.play();
+				break;
+			case duckPic:
+				duckSound.play();
+				break;
+			case frogPic:
+				frogSound.play();
+				break;
+			case horsePic:
+				horseSound.play();
+				break;
+			case sheepPic:
+				sheepSound.play();
+				break;
+			case pigPic:
+				pigSound.play();
 		}
 	}
 }
+
 
 // check answer function
 function checkAnswer(event) {
