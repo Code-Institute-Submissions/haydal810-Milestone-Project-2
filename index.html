@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="20x16" href="assets/images/favicons/dh-32x32.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -18,7 +19,7 @@
         <div class="container-fluid">
             <div class="row justify-content-between">
                 <div id="game-title" class="col-8 text-left gametitlecol">
-                    <p class="title-margin"><strong>Pick the Animal | by <a href="https://www.linkedin.com/in/david-hayden-668412180/" target="_blank">Haydal810</a></strong></p>
+                    <p class="title-margin title-text text-white">Pick the Animal Game | by <a href="https://www.linkedin.com/in/david-hayden-668412180/" target="_blank">David Hayden</a><br>Turns Left: <span id="turnsLeftSpan">5</span></p>
                 </div>
                 <div id="turns-left" class="col-6 turnsleftcol">
                     <p><strong><span id="right-or-wrong"></span></strong></p>
@@ -30,7 +31,8 @@
             <!-- Help Text to User, appears when HELP button is clicked -->
             <div id="help-row" style="display:none;" class="row justify-content-center advice-text text-white">
                 <div class="col-12 text-center">
-                    <p><strong><i class="far fa-play-circle fa-2x"></i><br>How to Play:<br>To begin, press the Green Button to make an animal sound. Match the Sound to the correct Animal Picture, by clicking on the picture you think matches the sound.<br>Each correct answer scores 1 point. There are 5 rounds.<br>Good Luck and Enjoy!</strong></p>
+                    <p><i class="far fa-play-circle fa-2x"></i><br>How to Play:<br>To begin, press the Green Button to make an animal sound. Match the Sound to the correct Animal Picture, by clicking on the picture you think matches the sound.<br>There are
+                        5 rounds.<br>Good Luck and Enjoy!</p>
                     <p><button id="play-game" type="button" class="btn btn-secondary btn-sm">Play Game</button></p>
                 </div>
             </div>
@@ -57,18 +59,12 @@
             </div>
             <!-- Row for Buttons  -->
             <div id="button-row" class="row row-disappear justify-content-around action-row">
-                <!-- Shuffle (Blue) Button  -->
-                <div class="col-2 col-button">
-                    <div>
-                        <button id="blueButton" type="button" class="btn btn-primary text-button"><i class="fas fa-random fa-2x"></i><br>Null<br>Button</button>
-                    </div>
-                </div>
                 <!-- Action (Green) Button  -->
                 <div class="col-8 col-button">
-                    <button id="greenButton" type="button" class="btn btn-success action-button text-button"><i class="far fa-play-circle fa-2x"></i><br>Press Play<br>for<br>Animal Sound</button>
+                    <button id="greenButton" type="button" class="btn btn-success action-button text-button"><i class="far fa-play-circle fa-2x"></i><br>Press Play <br> for Animal Sound</button>
                 </div>
                 <!-- Reset Game (Red) Button  -->
-                <div class="col-2 col-button">
+                <div class="col-4 col-button">
                     <div>
                         <button id="redButton" type="button" class="btn btn-danger text-button"><i class="fas fa-gamepad fa-2x"></i><br>Restart<br>Game</button>
                     </div>

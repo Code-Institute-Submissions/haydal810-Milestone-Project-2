@@ -107,8 +107,9 @@ let blueButton = document.querySelector('#blueButton');
 
 let rightOrWrong = document.querySelector('#right-or-wrong');
 let cards = document.querySelectorAll('.card');
+let turnsLeftSpan = document.querySelector('#turnsLeftSpan');
 let currentCard;
-let triesLeft = 5; // is this needed? 
+let turnsLeft = 5;
 
 
 // Event Listeners
@@ -118,9 +119,10 @@ redButton.onclick = () => resetGame();
 greenButton.onclick = () => randomShuffle();
 cards.forEach(card => card.onclick = () => checkAnswer(event));
 
+// reset game function - for red button
 
 function resetGame() {
-	buttonRestart()
+	buttonRestart();
 }
 
 // randomShuffle function - This shuffles the Animal Cards from the array
@@ -128,53 +130,55 @@ function resetGame() {
 function randomShuffle() {
 	let arr = [catPic, cowPic, dogPic, duckPic, frogPic, henPic, horsePic, sheepPic, pigPic];
 
-	// set card values
-	cards.forEach(card => {
-		let value = arr[Math.floor(Math.random() * arr.length)];
-		card.innerText = value;
-		card.dataset.answer = value;
-		card.innerHTML = value;
+	if (turnsLeft <= 0) {
+		turnsLeftSpan.innerText = 'GAME OVER!';
+	}
+	else {
+		turnsLeft--;
+		turnsLeftSpan.innerText = turnsLeft;
 
-	});
+		// set card values
+		cards.forEach(card => {
+			let value = arr[Math.floor(Math.random() * arr.length)];
+			card.innerText = value;
+			card.dataset.answer = value;
+			card.innerHTML = value;
 
-	// assign the current Answer from one of the cards dataset values
-	currentCard = cards[Math.floor(Math.random() * 3)].dataset.answer;
-	console.log("Current Card is: " + currentCard);
+		});
 
-	if (currentCard === '<img src="assets/images/hen.jpg">') {
-		henSound.play();
-	}
-	else if (currentCard === '<img src="assets/images/sheep.jpg">') {
-		sheepSound.play();
-	}
-	else if (currentCard === '<img src="assets/images/dog.jpg">') {
-		dogSound.play();
-	}
-	else if (currentCard === '<img src="assets/images/cat.jpg">') {
-		catSound.play();
-	}
-	else if (currentCard === '<img src="assets/images/duck.jpg">') {
-		duckSound.play();
-	}
-	else if (currentCard === '<img src="assets/images/horse.jpg">') {
-		horseSound.play();
-	}
-	else if (currentCard === '<img src="assets/images/pig.jpg">') {
-		pigSound.play();
-	}
-	else if (currentCard === '<img src="assets/images/frog.jpg">') {
-		frogSound.play();
-	}
-	else if (currentCard === '<img src="assets/images/cow.jpg">') {
-		cowSound.play();
-	}
+		// assign the current Answer from one of the cards dataset values
+		currentCard = cards[Math.floor(Math.random() * 3)].dataset.answer;
+		console.log("Current Card is: " + currentCard);
 
+		if (currentCard === '<img src="assets/images/hen.jpg">') {
+			henSound.play();
+		}
+		else if (currentCard === '<img src="assets/images/sheep.jpg">') {
+			sheepSound.play();
+		}
+		else if (currentCard === '<img src="assets/images/dog.jpg">') {
+			dogSound.play();
+		}
+		else if (currentCard === '<img src="assets/images/cat.jpg">') {
+			catSound.play();
+		}
+		else if (currentCard === '<img src="assets/images/duck.jpg">') {
+			duckSound.play();
+		}
+		else if (currentCard === '<img src="assets/images/horse.jpg">') {
+			horseSound.play();
+		}
+		else if (currentCard === '<img src="assets/images/pig.jpg">') {
+			pigSound.play();
+		}
+		else if (currentCard === '<img src="assets/images/frog.jpg">') {
+			frogSound.play();
+		}
+		else if (currentCard === '<img src="assets/images/cow.jpg">') {
+			cowSound.play();
+		}
+	}
 }
-
-// call once on page load
-// randomShuffle(); Don't want this to fire up on load...
-
-
 
 // check answer function
 function checkAnswer(event) {

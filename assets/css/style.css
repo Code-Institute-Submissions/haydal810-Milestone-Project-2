@@ -83,18 +83,26 @@
 
 .col-button {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 5px;
     margin-bottom: 50px;
 }
 
 /* --Advice Text to appear on smaller devices only-- */
 
 .advice-text {
-    background-color: red;
+    background-color: rgba(52, 152, 219,0.7);
+    font-family: 'Anton', sans-serif;
+    font-size: 15px;
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 30px;
 
+}
+
+.title-text {
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    
 }
 
 @media only screen and (min-width: 480px) {
@@ -140,7 +148,7 @@
 @media only screen and (min-width: 1400px) {
     .action-row {
         padding: 50px;
-        margin-top: 450px;
+        margin-top: 350px;
         margin-bottom: 150px;
     }
 }
