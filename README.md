@@ -14,7 +14,7 @@ As a new User (aged 3years +) to the web application, I want to:
 
 * be able to understand how to play the game, and understand the difference between a right and wrong answer easily.
 * to be able to identify the buttons, which should be large, colorful and easy to press when needed.
-* Cartoon-like, sound-effects when I play the game, so as to encourage my enjoyment, and keep me using the application for longer.
+* hear Cartoon-like, sound-effects when I play the game, so as to encourage my enjoyment, and keep me using the application for longer.
 * be able to easily identify what each animal is on the animal card, so as to give me an understanding of how the game works.
 
 As a new User (older child/sibling or adult/parent) to the web application, I want to:
@@ -60,7 +60,7 @@ The Sounds that are heard in the application are simple, clear and for a younger
 * I would like to introduce a scoreboard, so users can record how well they last played. This would mean, that the user would have to proceed to the next round, even if he selected an incorrect animal card. (Presently, the round doesnt progress until the correct answer is selected)
 * xxx
 
-## Technologies Used
+## Main Technologies Used
 
 * This project uses HTML and CSS programming languages. Also used is Javascript for the majority of the application. 
 
@@ -90,42 +90,57 @@ The Sounds that are heard in the application are simple, clear and for a younger
 
 #### Meeting the needs of the user stories (as described in the UX section of this README file)
 
-#### As a new visitor to the website, I want to easily navigate the site, regardless of device used, so I can find what I need efficiently.
-The website is responsive on all devices, thanks to the Bootstrap 4 Grid incorporated in the HTML & CSS code. 
+#### As a new User (aged 3years +) to the web application, I want to be able to understand how to play the game, and be able to easily refer to the instructions so I can explain to the younger user, if needs be, how to play the game
 
-#### As a new visitor to the website, I want to find out about things to do in the area, so I can decide if it's worth visiting the area.
-xxx
+The game...
 
-
-#### As a new visitor to the website, I want to find out where to eat & drink in the area, so I can decide if it's worth visiting the area.
-
-xxx
+#### As a new User (aged 3years +) to the web application, I want to to be able to identify the buttons, which should be large, colorful and easy to press when needed.
+The game...
 
 
-#### As a new visitor to the website, I want to know if it's possible what accomodation is available locally, in case I decide to stay in the area for longer than a day.
-xxx
+#### As a new User (aged 3years +) to the web application, I want to hear Cartoon-like, sound-effects when I play the game, so as to encourage my enjoyment, and keep me using the application for longer.
+
+The game...
 
 
-#### As a visitor to the website, I want to contact the person in charge of the website, to discuss how I want my local business to be mentioned on the website.
-xxx
+#### As a new User (aged 3years +) to the web application, I want to be able to easily identify what each animal is on the animal card, so as to give me an understanding of how the game works.
+The game...
 
+
+#### As a new User (older child/sibling or adult/parent) to the web application, I want to be able to understand how to play the game, and be able to easily refer to the instructions so I can explain to the younger user, if needs be, how to play the game
+The game...
+
+#### As a new User (older child/sibling or adult/parent) to the web application, I want to be able to know who created this application.
+The game...
+
+#### As a new User (older child/sibling or adult/parent) to the web application, I want to be able to present this web application to a younger child, and know they will be entertained for at least a few minutes! 
+The game...
+
+#### As a new User (older child/sibling or adult/parent) to the web application, I want to be able to know that this web application is somewhat educational, and that a younger user will get some educational use from it.
+The game...
+
+## Testing
+
+User testing - the game was presented to users of a variety of ages for feedback on UX.
+
+More is needed here...
 
 
 ## Deployment
 
-This project was developed using the AWS Cloud9 IDE, committed to git and pushed to GitHub using the built in function within cloud9.
+This project was developed using the AWS Cloud9 IDE, committed to git and pushed to GitHub using the built in function within AWS Cloud9.
 From there it was deployed to GitHub Pages from its GitHub repository.
-The website is published here: https://haydal810.github.io/Milestone-Project-1/
+The website is published here: https://haydal810.github.io/Milestone-Project-2/
 
 ### To deploy this page to GitHub Pages from its GitHub repository, the following steps were taken:
 1. Log into GitHub.
-2. From the list of repositories on the screen, select haydal810/Milestone-Project-1
+2. From the list of repositories on the screen, select haydal810/Milestone-Project-2
 3. From the menu items near the top of the page, select Settings.
 4. Scroll down to the GitHub Pages section.
 5. Under Source click the drop-down menu labelled None and select Master Branch
 6. On selecting Master Branch the page is automatically refreshed, the website is now deployed.
 7. Scroll back down to the GitHub Pages section to retrieve the link to the deployed website.
-8. The website is published here: https://haydal810.github.io/Milestone-Project-1/
+8. The website is published here: https://haydal810.github.io/Milestone-Project-2/
 
 ### How to run this project locally.
 To clone this project from GitHub:
@@ -145,33 +160,16 @@ Further information can be found [here](https://help.github.com/en/articles/clon
 
 ### Content
 xxxxx
-* [https://www.facebook.com/](https://www.facebook.com/)
-
-
-
-The two video clips on the "Outdoor Activities" page were sourced from Youtube:
-
-* [https://youtu.be/Et98URg4xas](https://youtu.be/Et98URg4xas)
-* [https://youtu.be/DMagyvlU_7U?list=PLM6KOvVfwyn2P4LUZbTwTpotW47L3Fwbi](https://youtu.be/DMagyvlU_7U?list=PLM6KOvVfwyn2P4LUZbTwTpotW47L3Fwbi)
 
 
 ### Media
-The photos used in this site were obtained from:
-
-pexels...animals, background
-background cartoon farm - vectorstock.com
-
-
-### External CSS Code
-
-External CSS code was taken from the following sources:
-- The CSS code for the footer Social Media Icons taken from www.codemyui.com
-- The CSS code for the hover effect on the Nav Bar was taken from https://github.com/IanLunn
+- The animal pictures used in this site were obtained from: https://www.pexels.com/
+- The background image was sourced from https://www.vectorstock.com/
 
 ### Acknowledgements
 
-- I received inspiration for this project from TBA
 - I'd like to thank my mentor, [Antonija Šimić](https://github.com/tonkec), for her useful and constructive feedback throughout the Milestone Project
+- I'd also like to mention and thank [Sean Murphy](https://github.com/nazarja), an Code Institute Alumni Student, giving advice to me at all hours, on Slack, when I hit a JS code wall.
 
 
 
