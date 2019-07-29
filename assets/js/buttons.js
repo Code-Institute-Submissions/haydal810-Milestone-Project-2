@@ -16,14 +16,30 @@ function buttoncardShufflesound() {
 // This is the onclick function, when user clicks on the "How to Play" Button
 
 function helpText() {
+	document.getElementById("needHelp").style.display = "none";
+	document.getElementById("game-title").style.display = "none";
 	document.getElementById("animal-row").style.display = "none";
 	document.getElementById("button-row").style.display = "none";
 	document.getElementById("portrait-advice").style.display = "none";
 	document.getElementById("help-row").style.display = "block";
 }
 
+function gameoverText() {
+	document.getElementById("needHelp").style.display = "none";
+	document.getElementById("game-title").style.display = "none";
+	document.getElementById("animal-row").style.display = "none";
+	document.getElementById("button-row").style.display = "none";
+	document.getElementById("gameover-playagain").style.display = "block";
+}
+
+
+// Event Listeners for onclick functions 
+
 var helpButton = document.getElementById("how-to-play");
 helpButton.addEventListener("click", helpText);
+
+var playagainButton = document.getElementById("play-again");
+playagainButton.addEventListener("click", buttonRestart);
 
 
 // This is the onclick function, when green button is clicked
@@ -132,6 +148,7 @@ function randomShuffle() {
 
 	if (turnsLeft <= 0) {
 		turnsLeftSpan.innerText = 'GAME OVER!';
+		gameoverText();
 	}
 	else {
 		turnsLeft--;
