@@ -140,7 +140,8 @@ function randomShuffle() {
 		// Check to see if the game is over
 		if (turnsLeft <= 0) {
 			gameoverText();
-			
+			console.log('Game Over');
+			return;
 		}
 
 		turnsLeft--;
