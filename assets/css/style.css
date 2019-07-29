@@ -21,8 +21,10 @@
 .turnsleftcol {
     padding-left: 0px;
 }
-    
 
+.howtoplay {
+    top: 10px;
+}
 
 /* --Animal Cards Row-- */
 
@@ -90,7 +92,7 @@
 /* --Advice Text to appear on smaller devices only-- */
 
 .advice-text {
-    background-color: rgba(52, 152, 219,0.7);
+    background-color: rgba(52, 152, 219, 0.7);
     font-family: 'Anton', sans-serif;
     font-size: 19px;
     padding: 10px;
@@ -102,13 +104,8 @@
 .title-text {
     font-family: 'Anton', sans-serif;
     font-size: 20px;
-    
-}
 
-.howtoplay {
-    top:-10px;
 }
-
 
 @media only screen and (min-width: 480px) {
     .advice-text {

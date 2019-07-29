@@ -16,6 +16,7 @@ function buttoncardShufflesound() {
 // This is the onclick function, when user clicks on the "How to Play" Button
 
 function helpText() {
+	document.getElementById("rightorwrong").style.display = "none";
 	document.getElementById("needHelp").style.display = "none";
 	document.getElementById("game-title").style.display = "none";
 	document.getElementById("animal-row").style.display = "none";
@@ -25,11 +26,14 @@ function helpText() {
 }
 
 function gameoverText() {
+	document.getElementById("portrait-advice").style.display = "none";
+	document.getElementById("rightorwrong").style.display = "none";
 	document.getElementById("needHelp").style.display = "none";
 	document.getElementById("game-title").style.display = "none";
 	document.getElementById("animal-row").style.display = "none";
 	document.getElementById("button-row").style.display = "none";
 	document.getElementById("gameover-playagain").style.display = "block";
+	taadaaSound.play();
 }
 
 
@@ -53,6 +57,9 @@ function buttonClicktext() {
 // All global variables
 
 // Game Sounds variables here:
+
+var taadaaSound = new Audio();
+taadaaSound.src = "assets/audio/Taadaasound.mp3";
 
 var shuffleSound = new Audio();
 shuffleSound.src = "assets/audio/shuffle.mp3";
@@ -119,7 +126,6 @@ pigSound.src = "assets/audio/pig-sound.mp3";
 let playgamehelpbutton = document.querySelector('#play-game');
 let redButton = document.querySelector('#redButton');
 let greenButton = document.querySelector('#greenButton');
-
 
 let rightOrWrong = document.querySelector('#right-or-wrong');
 let cards = document.querySelectorAll('.card');
@@ -201,12 +207,12 @@ function randomShuffle() {
 function checkAnswer(event) {
 	let card = event.currentTarget.dataset.answer;
 	if (card === currentCard) {
-		rightOrWrong.innerText = "You're Right!!! Well Done!";
+		rightOrWrong.innerText = "You're Right, Well Done!";
 		rightanswerSound.play();
 		setTimeout(randomShuffle, 3900);
 	}
 	else {
-		rightOrWrong.innerText = `You're Wrong!!! Try Again `;
+		rightOrWrong.innerText = `You're Wrong, Try Again! `;
 		wronganswerSound.play();
 	}
 }

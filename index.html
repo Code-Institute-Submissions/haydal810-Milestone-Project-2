@@ -17,17 +17,21 @@
     <div class="container-fluid farm-background">
         <div class="container-fluid">
             <div class="row justify-content-between">
+
+
                 <!-- Game Title & Turns Left Text here -->
-                <div id="game-title" class="col-8 text-left gametitlecol">
-                    <p class="title-margin title-text text-white">Pick the Animal Game | by <a href="https://www.linkedin.com/in/david-hayden-668412180/" target="_blank">David Hayden</a><br>Turns Left: <span id="turnsLeftSpan">5</span></p>
-                </div>
-                <!-- This indicates to the User if Card selection is Right or Wrong -->
-                <div id="turns-left" class="col-6 turnsleftcol">
-                    <p><strong><span id="right-or-wrong"></span></strong></p>
+                <div id="game-title" class="col-6 text-left gametitlecol">
+                    <p class="title-margin title-text text-white">Pick the Animal Game | by <a href="https://www.linkedin.com/in/david-hayden-668412180/" target="_blank">David</a><br>Turns Left: <span id="turnsLeftSpan">5</span></p>
                 </div>
                 <!-- This is the How to Play Button -->
                 <div id="needHelp" class="col-4 text-right howtoplay">
                     <button type="button" id="how-to-play" class="btn btn-warning btn-sm"><i class="far fa-smile"></i> How to Play</button>
+                </div>
+            </div>
+            <!-- This indicates to the User if Card selection is Right or Wrong -->
+            <div class="row justify-content-start">
+                <div id="rightorwrong" class="col-5 turnsleftcol title-text text-success">
+                    <p><span id="right-or-wrong"></span></p>
                 </div>
             </div>
             <!-- Help Text to User, appears when HELP button is clicked -->
