@@ -1,20 +1,28 @@
-This is my 2nd Milestone Project for Code Institute - Simple Game for Children aged 3years+
+This is my 2nd Milestone Project for Code Institute - Simple Game for Children aged 3 years+
 
 
-# NAME OF APP - TBA
+# Pick the Animal Game
 
-Description of game here
+This is a simple animal association game, where the User must try and match the generated animal sound effect, with one of the the three randomly generated animal cards. There are five rounds, each round generates layout of animal pictures.
 
 ## UX
 
-This website has been designed for ...
+This web application has been designed for young children, aged 3years and older and their parents. The User should find this application educational, as it shows the user the correct sound effects matched to the correct animal. The result for selecting the right animal card in each round is a cheering sound, designed to reward the user. An incorrect selection of a animal card gives less enthusiastic alarm type sound, however, the pictures will stay in place until the correct card is selected, so the user gets to have "another shot" at the answer. The background is of a cartoon farm, which was selected to be more appealing to younger users. 
 
 ### User Stories:
-* As a new visitor to the website, I want to ...
-* As a new visitor to the website, I want to ...
-* As a new visitor to the website, I want to ...
-* As a new visitor to the website, I want to ...
-* As a visitor to the website, I want to ...
+As a new User (aged 3years +) to the web application, I want to:
+
+* be able to understand how to play the game, and understand the difference between a right and wrong answer easily.
+* to be able to identify the buttons, which should be large, colorful and easy to press when needed.
+* Cartoon-like, sound-effects when I play the game, so as to encourage my enjoyment, and keep me using the application for longer.
+* be able to easily identify what each animal is on the animal card, so as to give me an understanding of how the game works.
+
+As a new User (older child/sibling or adult/parent) to the web application, I want to:
+
+* be able to understand how to play the game, and be able to easily refer to the instructions so I can explain to the younger user, if needs be, how     to play the game
+* be able to know who created this application.
+* be able to present this web application to a younger child, and know they will be entertained for at least a few minutes! 
+* be able to know that this web application is somewhat educational, and that a younger user will get some educational use from it.
 
 ### Wireframes: 
 * My Wireframes plan can be found in the Wireframes Folder in my github repository:
@@ -23,40 +31,38 @@ This website has been designed for ...
 
 ## Features
 
-### Home (Landing Page, "Logo in Navigation bar on the top left side")
-XXXXX
+### Layout
+This is a one page layout, designed with simplicity in mind, especially visually for younger Users. The layout is responsive, but operates in landscape only for mobile devices. Advice Text pops up on the device, when orientated in portrait.
 
-### Outdoor Activities Page (Nav Item 1)
-XXXX
+### Buttons
+The User Buttons in this application are big, colorful and designed with a childs small fingers in mind. The large green button is on the left hand side of the application, at the bottom, with a large Font Awesome "Play" Icon at the top of it, along with text. This immediately should draw the user to press it, to begin the game.
 
-### Food & Drink Page (Nav Item 2)
-XXX
+### Font
+The font used is a google font, called "Anton". A visually appealing font, which I found was a nice nod to the old Nintendo font used years ago. Clean and crisp, and easily readable.
 
-### Accomodation Page (Nav Item 3)
-XXX
-
-### Contact Page (Nav Item 4)
-XXX
+### Sound Effects
+The Sounds that are heard in the application are simple, clear and for a younger user, almost cartoon like, t appeal to the younger user.
 
 
 ### Existing Features
-* xxx 
-* xxxxx
+* Title Name - This has a link in the designers name that will bring the user to an new window and the designers LinkedIn Profile.
 
-* xxx
+* How to Play Button - This, when clicked, reveals a hidden div that has text explaining the rules of the game.
 
-* xxx
+* Big Green Button - This button is pressed once to begin the game. It's the only time the button is required until the end of the game, as the game                         automatically flows from one round to the next once the correct picture is selected.
 
-* xxx
+* Big Red Button - This button has a simple function: Restart the game. It has a onclick function that reloads the entire window. 
+
+* Advice text window when device is held in portrait orientation - This is just to advise the user that the game works in landscape only.
 
 ### Features Left to Implement
-* xxx
-* xxx
+* I would like to add far more animal pictures and associated animal noises, and increase the rounds from 5 to 10.
+* I would like to introduce a scoreboard, so users can record how well they last played. This would mean, that the user would have to proceed to the next round, even if he selected an incorrect animal card. (Presently, the round doesnt progress until the correct answer is selected)
 * xxx
 
 ## Technologies Used
 
-* This project uses HTML and CSS programming languages. js etc
+* This project uses HTML and CSS programming languages. Also used is Javascript for the majority of the application. 
 
 ### Other technologies used:
 * Cloud9 - This was used as the IDE for building the website. https://c9.io/login - change this to AWS
@@ -65,8 +71,7 @@ XXX
 * Google Fonts - The project uses Google fonts to style the website fonts. https://fonts.google.com/
 * AutoPrefixer - This project used AutoPrefixer to make sure the css code is valid for all browsers. https://autoprefixer.github.io/
 * jQuery - This project uses jQuery to reference Javascript needed for the responsive navigation bar on every page. http://jquery.com/
-* Popper.js - This project uses Popper.js to reference Javascript, needed for the responsive navbar. https://popper.js.org/
-* more TBA
+
 
 ## Testing
 
