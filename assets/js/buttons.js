@@ -51,6 +51,7 @@ rightanswerSound.src = "assets/audio/cheering.mp3";
 
 
 var catPic = '<img src="assets/images/cat.jpg">';
+catPic.answer = "Cat";
 catPic.src = '<img src="assets/images/cat.jpg">';
 var catSound = new Audio();
 catSound.src = "assets/audio/cat-meow.mp3";
@@ -122,16 +123,18 @@ function resetGame() {
 	buttonRestart()
 }
 
-// randomShuffle function
+// randomShuffle function - This shuffles the Animal Cards from the array
+
 function randomShuffle() {
 	let arr = [catPic, cowPic, dogPic, duckPic, frogPic, henPic, horsePic, sheepPic, pigPic];
-
 
 	// set card values
 	cards.forEach(card => {
 		let value = arr[Math.floor(Math.random() * arr.length)];
-		card.innerHTML = value;
+		card.innerText = value;
 		card.dataset.answer = value;
+		card.innerHTML = value;
+
 	});
 
 	// assign the current Answer from one of the cards dataset values
@@ -165,7 +168,7 @@ function randomShuffle() {
 	else if (currentCard === '<img src="assets/images/cow.jpg">') {
 		cowSound.play();
 	}
-	
+
 }
 
 // call once on page load
@@ -180,107 +183,9 @@ function checkAnswer(event) {
 		rightOrWrong.innerText = "You're Right!!! Well Done!";
 		rightanswerSound.play();
 		setTimeout(randomShuffle, 3900);
-		
 	}
 	else {
 		rightOrWrong.innerText = `You're Wrong!!! Try Again `;
 		wronganswerSound.play();
-		
 	}
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Green Button Function - This is supposed to pick one of the 3 images and play a sound file matching it.
-
-function greenbuttonAnimalsounds() {
-
-	var cardArray = [document.getElementById("card1").innerHTML, document.getElementById("card2").innerHTML, document.getElementById("card3").innerHTML];
-
-	var randomCard = cardArray[Math.floor(Math.random() * cardArray.length)];
-
-	console.log(randomCard);
-
-	if (randomCard === '<img src="assets/images/cow.jpg">') {
-		cowSound.play();
-
-	}
-	else if (
-		randomCard === '<img src="assets/images/hen.jpg">') {
-		henSound.play();
-	}
-	else if (
-		randomCard === '<img src="assets/images/cat.jpg">') {
-		catSound.play();
-	}
-	else if (
-		randomCard === '<img src="assets/images/dog.jpg">') {
-		dogSound.play();
-	}
-	else if (
-		randomCard === '<img src="assets/images/horse.jpg">') {
-		horseSound.play();
-	}
-	else if (
-		randomCard === '<img src="assets/images/sheep.jpg">') {
-		sheepSound.play();
-	}
-	else if (
-		randomCard === '<img src="assets/images/frog.jpg">') {
-		frogSound.play();
-	}
-	else if (
-		randomCard === '<img src="assets/images/pig.jpg">') {
-		pigSound.play();
-	}
-	else if (
-		randomCard === '<img src="assets/images/duck.jpg">') {
-		duckSound.play();
-	}
-
-
-}
-
-//var greenButton = document.getElementById("greenbutton");
-//greenButton.addEventListener("click", (greenbuttonAnimalsounds, buttonClicktext))
-
-
-
-
-// Onclick Functions for when user clicks on image. Image should go either red or green, depending on right or wrong answer.
-
-function greenBox() {
-	document.getElementById(("card") || ("card2") || ("card3")).style.border = "15px solid green";
-	rightanswerSound.play();
-	console.log("Card matches the sound effect");
-	setTimeout(randomShuffle, 3900);
-
-}
-
-function redBox() {
-	document.getElementById(("card") || ("card2") || ("card3")).style.border = "15px solid red";
-	wronganswerSound.play();
-	console.log("Card does not match the sound effect");
-	setTimeout(randomShuffle, 3900);
-
 }
