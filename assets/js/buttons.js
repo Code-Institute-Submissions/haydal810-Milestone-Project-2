@@ -45,14 +45,6 @@ var playagainButton = document.getElementById("play-again");
 playagainButton.addEventListener("click", buttonRestart);
 
 
-// This is the onclick function, when green button is clicked
-
-function buttonClicktext() {
-	document.getElementById("game-title").style.display = "none";
-	document.getElementById("turns-left").style.display = "block";
-}
-
-
 // All global variables
 
 // Game Sounds variables here:
@@ -133,10 +125,10 @@ let currentCard;
 let turnsLeft = 5;
 
 
-// Event Listeners
+// Additional Event Listeners
 
 playgamehelpbutton.onclick = () => buttonRestart();
-greenButton.onclick = () => randomShuffle();
+greenButton.onclick = () => (randomShuffle(), pressplay());
 cards.forEach(card => card.onclick = () => checkAnswer(event));
 
 // randomShuffle function - This shuffles the Animal Cards from the array
