@@ -3,7 +3,7 @@
 function buttonRestart() {
 
 	window.location.reload();
-
+	
 }
 
 
@@ -130,16 +130,10 @@ let turnsLeft = 5;
 
 // Event Listeners
 
-playgamehelpbutton.onclick = () => resetGame();
-redButton.onclick = () => resetGame();
+playgamehelpbutton.onclick = () => buttonRestart();
+redButton.onclick = () => buttonRestart();
 greenButton.onclick = () => randomShuffle();
 cards.forEach(card => card.onclick = () => checkAnswer(event));
-
-// reset game function - for red button
-
-function resetGame() {
-	buttonRestart();
-}
 
 // randomShuffle function - This shuffles the Animal Cards from the array
 
@@ -211,3 +205,5 @@ function checkAnswer(event) {
 		wronganswerSound.play();
 	}
 }
+
+randomShuffle();
