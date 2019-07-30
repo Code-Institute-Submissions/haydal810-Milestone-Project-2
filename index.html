@@ -21,7 +21,9 @@
 
                 <!-- Game Title & Turns Left Text here -->
                 <div id="game-title" class="col-6 text-left gametitlecol">
-                    <p class="title-margin title-text text-white">Pick the Animal Game | by <a href="https://www.linkedin.com/in/david-hayden-668412180/" target="_blank">David</a><br>Turns Left: <span id="turnsLeftSpan">5</span></p>
+                    <p id="game-title-heading" class="title-margin title-text text-white">Pick the Animal Game | by <a href="https://www.linkedin.com/in/david-hayden-668412180/" target="_blank">David</a></p>
+                    <p id="which-animal" class="title-margin title-text text-white" style="display:none;">Which Animal made that sound? </p>
+                    <p class="title-margin title-text text-white">Turns Left: <span id="turnsLeftSpan">5</span></p>
                 </div>
                 <!-- This is the How to Play Button -->
                 <div id="needHelp" class="col-4 text-right howtoplay">
@@ -74,13 +76,7 @@
             <div id="button-row" class="row row-disappear justify-content-around action-row">
                 <!-- Action (Green) Button  -->
                 <div class="col-8 col-button">
-                    <button id="greenButton" type="button" class="btn btn-success action-button text-button"><i class="far fa-play-circle fa-2x"></i><br>Press Play <br> for Animal Sound</button>
-                </div>
-                <!-- Reset Game (Red) Button  -->
-                <div class="col-4 col-button">
-                    <div>
-                        <button id="redButton" type="button" class="btn btn-danger text-button"><i class="fas fa-gamepad fa-2x"></i><br>Restart<br>Game</button>
-                    </div>
+                    <button id="greenButton" type="button" class="btn btn-success action-button btn-lg text-button"><i class="far fa-play-circle fa-3x"></i><br><strong>PRESS PLAY <br> TO BEGIN GAME</strong></button>
                 </div>
             </div>
         </div>

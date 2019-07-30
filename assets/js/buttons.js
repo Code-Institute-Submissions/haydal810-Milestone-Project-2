@@ -30,6 +30,11 @@ function gameoverText() {
 	taadaaSound.play();
 }
 
+function pressplay() {
+	document.getElementById("game-title-heading").style.display = "none";
+	document.getElementById("which-animal").style.display = "block";
+}
+
 
 // Event Listeners for onclick functions 
 
@@ -131,7 +136,6 @@ let turnsLeft = 5;
 // Event Listeners
 
 playgamehelpbutton.onclick = () => buttonRestart();
-redButton.onclick = () => buttonRestart();
 greenButton.onclick = () => randomShuffle();
 cards.forEach(card => card.onclick = () => checkAnswer(event));
 
@@ -141,7 +145,6 @@ function randomShuffle() {
 	let arr = [catPic, cowPic, dogPic, duckPic, frogPic, henPic, horsePic, sheepPic, pigPic];
 
 	if (turnsLeft <= 0) {
-		turnsLeftSpan.innerText = 'GAME OVER!';
 		gameoverText();
 	}
 	else {
@@ -206,4 +209,4 @@ function checkAnswer(event) {
 	}
 }
 
-randomShuffle();
+
