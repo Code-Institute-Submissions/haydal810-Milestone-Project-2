@@ -169,8 +169,6 @@ xxxxx
 ### Acknowledgements
 
 - I'd like to thank my mentor, [Antonija Šimić](https://github.com/tonkec), for her useful and constructive feedback throughout the Milestone Project
-- I'd also like to mention and thank [Sean Murphy](https://github.com/nazarja), an Code Institute Alumni Student, giving advice to me at all hours, on Slack, when I hit a JS code wall.
-
 
 
 ### The content of this website is for educational purposes only. 

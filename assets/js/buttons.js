@@ -3,46 +3,49 @@
 function buttonRestart() {
 
 	window.location.reload();
-	
+
 }
 
 
 // This is the onclick function, when user clicks on the "How to Play" Button
 
 function helpText() {
-	document.getElementById("rightorwrong").style.display = "none";
-	document.getElementById("needHelp").style.display = "none";
-	document.getElementById("game-title").style.display = "none";
-	document.getElementById("animal-row").style.display = "none";
-	document.getElementById("button-row").style.display = "none";
-	document.getElementById("portrait-advice").style.display = "none";
+	document.getElementById("game-container").style.visibility = "hidden";
 	document.getElementById("help-row").style.display = "block";
 }
 
-function gameoverText() {
-	document.getElementById("portrait-advice").style.display = "none";
-	document.getElementById("rightorwrong").style.display = "none";
-	document.getElementById("needHelp").style.display = "none";
-	document.getElementById("game-title").style.display = "none";
-	document.getElementById("animal-row").style.display = "none";
-	document.getElementById("button-row").style.display = "none";
+// This function makes text appear after game is over.
+
+function gameOverText() {
+	document.getElementById("game-container").style.visibility = "hidden";
 	document.getElementById("gameover-playagain").style.display = "block";
 	taadaaSound.play();
 }
 
-function pressplay() {
+function pressPlay() {
 	document.getElementById("game-title-heading").style.display = "none";
 	document.getElementById("which-animal").style.display = "block";
 }
 
+function rightOrWrongAnswerDisappear() {
+	document.getElementById("rightorwrong").style.display = "none";
+}
+
+function rightOrWrongAnswerReappear() {
+	document.getElementById("rightorwrong").style.display = "block";
+}
+
+function disableButton() {
+	document.getElementById("greenButton").disabled = true;
+}
 
 // Event Listeners for onclick functions 
 
 var helpButton = document.getElementById("how-to-play");
 helpButton.addEventListener("click", helpText);
 
-var playagainButton = document.getElementById("play-again");
-playagainButton.addEventListener("click", buttonRestart);
+var playAgainButton = document.getElementById("play-again");
+playAgainButton.addEventListener("click", buttonRestart);
 
 
 // All global variables
@@ -55,17 +58,16 @@ taadaaSound.src = "assets/audio/Taadaasound.mp3";
 var shuffleSound = new Audio();
 shuffleSound.src = "assets/audio/shuffle.mp3";
 
-var wronganswerSound = new Audio();
-wronganswerSound.src = "assets/audio/incorrect-sound.mp3";
+var wrongAnswerSound = new Audio();
+wrongAnswerSound.src = "assets/audio/incorrect-sound.mp3";
 
-var rightanswerSound = new Audio();
-rightanswerSound.src = "assets/audio/cheering.mp3";
+var rightAnswerSound = new Audio();
+rightAnswerSound.src = "assets/audio/cheering.mp3";
 
 //  Animal Picture & Sound Variables:	
 
 
 var catPic = '<img src="assets/images/cat.jpg">';
-catPic.answer = "Cat";
 catPic.src = '<img src="assets/images/cat.jpg">';
 var catSound = new Audio();
 catSound.src = "assets/audio/cat-meow.mp3";
@@ -114,8 +116,7 @@ pigSound.src = "assets/audio/pig-sound.mp3";
 
 // Variables for ID's in index.html
 
-let playgamehelpbutton = document.querySelector('#play-game');
-let redButton = document.querySelector('#redButton');
+let playGameHelpButton = document.querySelector('#play-game');
 let greenButton = document.querySelector('#greenButton');
 
 let rightOrWrong = document.querySelector('#right-or-wrong');
@@ -127,8 +128,8 @@ let turnsLeft = 5;
 
 // Additional Event Listeners
 
-playgamehelpbutton.onclick = () => buttonRestart();
-greenButton.onclick = () => (randomShuffle(), pressplay());
+playGameHelpButton.onclick = () => buttonRestart();
+greenButton.onclick = () => (randomShuffle(), pressPlay(),disableButton());
 cards.forEach(card => card.onclick = () => checkAnswer(event));
 
 // randomShuffle function - This shuffles the Animal Cards from the array
@@ -137,13 +138,14 @@ function randomShuffle() {
 	let arr = [catPic, cowPic, dogPic, duckPic, frogPic, henPic, horsePic, sheepPic, pigPic];
 
 	if (turnsLeft <= 0) {
-		gameoverText();
+		gameOverText();
 	}
 	else {
 		turnsLeft--;
 		turnsLeftSpan.innerText = turnsLeft;
 
-		// set card values
+		// set card value for each card, from the array:
+		
 		cards.forEach(card => {
 			let value = arr[Math.floor(Math.random() * arr.length)];
 			card.innerText = value;
@@ -153,6 +155,7 @@ function randomShuffle() {
 		});
 
 		// assign the current Answer from one of the cards dataset values
+		
 		currentCard = cards[Math.floor(Math.random() * 3)].dataset.answer;
 		console.log("Current Card is: " + currentCard);
 
@@ -191,14 +194,17 @@ function randomShuffle() {
 function checkAnswer(event) {
 	let card = event.currentTarget.dataset.answer;
 	if (card === currentCard) {
+		rightOrWrongAnswerReappear();
 		rightOrWrong.innerText = "You're Right, Well Done!";
-		rightanswerSound.play();
+		rightAnswerSound.play();
+		setTimeout(rightOrWrongAnswerDisappear, 3000);
 		setTimeout(randomShuffle, 3900);
+
 	}
 	else {
+		rightOrWrongAnswerReappear();
 		rightOrWrong.innerText = `You're Wrong, Try Again! `;
-		wronganswerSound.play();
+		wrongAnswerSound.play();
+		setTimeout(rightOrWrongAnswerDisappear, 2000);
 	}
 }
-
-
