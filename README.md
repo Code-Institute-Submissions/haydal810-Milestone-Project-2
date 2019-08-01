@@ -62,12 +62,11 @@ The Sounds that are heard in the application are simple, clear and for a younger
 * Javascript for the majority of the application. 
 
 ### Other technologies used:
-* Cloud9 - This was used as the IDE for building the website. https://c9.io/login - change this to AWS
+* AWS Cloud9 - This was used as the IDE for building the website. 
 * BootstrapCDN - The project uses Bootstrap4 to simplify the structure of the website and make the website responsive easily. https://getbootstrap.com/
 * Fontawesome - Used to provide icons from FontAwesome throughtout the site. https://fontawesome.com/
 * Google Fonts - The project uses Google fonts to style the website fonts. https://fonts.google.com/
 * AutoPrefixer - This project used AutoPrefixer to make sure the css code is valid for all browsers. https://autoprefixer.github.io/
-* jQuery - This project uses jQuery to reference Javascript needed for the responsive navigation bar on every page. http://jquery.com/
 
 
 ## Testing

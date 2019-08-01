@@ -6,7 +6,6 @@ function buttonRestart() {
 
 }
 
-
 // This is the onclick function, when user clicks on the "How to Play" Button
 
 function helpText() {
@@ -66,7 +65,6 @@ rightAnswerSound.src = "assets/audio/cheering.mp3";
 
 //  Animal Picture & Sound Variables:	
 
-
 var catPic = '<img src="assets/images/cat.jpg">';
 catPic.src = '<img src="assets/images/cat.jpg">';
 var catSound = new Audio();
@@ -112,8 +110,6 @@ pigPic.src = '<img src="assets/images/pig.jpg">';
 var pigSound = new Audio();
 pigSound.src = "assets/audio/pig-sound.mp3";
 
-
-
 // Variables for ID's in index.html
 
 let playGameHelpButton = document.querySelector('#play-game');
@@ -125,11 +121,10 @@ let turnsLeftSpan = document.querySelector('#turnsLeftSpan');
 let currentCard;
 let turnsLeft = 5;
 
-
 // Additional Event Listeners
 
 playGameHelpButton.onclick = () => buttonRestart();
-greenButton.onclick = () => (randomShuffle(), pressPlay(),disableButton());
+greenButton.onclick = () => (randomShuffle(), pressPlay(), disableButton());
 cards.forEach(card => card.onclick = () => checkAnswer(event));
 
 // randomShuffle function - This shuffles the Animal Cards from the array
@@ -145,7 +140,7 @@ function randomShuffle() {
 		turnsLeftSpan.innerText = turnsLeft;
 
 		// set card value for each card, from the array:
-		
+
 		cards.forEach(card => {
 			let value = arr[Math.floor(Math.random() * arr.length)];
 			card.innerText = value;
@@ -155,7 +150,7 @@ function randomShuffle() {
 		});
 
 		// assign the current Answer from one of the cards dataset values
-		
+
 		currentCard = cards[Math.floor(Math.random() * 3)].dataset.answer;
 		console.log("Current Card is: " + currentCard);
 
