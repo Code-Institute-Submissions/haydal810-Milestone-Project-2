@@ -56,13 +56,14 @@ The Sounds that are heard in the application are simple, clear and for a younger
 * Advice text window when device is held in portrait orientation - This is just to advise the user that the game works in landscape only.
 
 ### Features Left to Implement
-* I would like to add far more animal pictures and associated animal noises, and increase the rounds from 5 to 10.
+* I would like to add more animal pictures and associated animal noises, and increase the rounds from 5 to 10.
 * I would like to introduce a scoreboard, so users can record how well they last played. This would mean, that the user would have to proceed to the next round, even if he selected an incorrect animal card. (Presently, the round doesnt progress until the correct answer is selected)
 * xxx
 
 ## Main Technologies Used
 
-* This project uses HTML and CSS programming languages. Also used is Javascript for the majority of the application. 
+* This project uses HTML and CSS programming languages. 
+* Javascript for the majority of the application. 
 
 ### Other technologies used:
 * Cloud9 - This was used as the IDE for building the website. https://c9.io/login - change this to AWS
@@ -80,7 +81,17 @@ The Sounds that are heard in the application are simple, clear and for a younger
 1. Google Chrome (Version 74.0)
     * Chrome Lighthouse was used to audit the website.
 2. Mozilla Firefox (Version 67.0)
-3. Internet Explorer 11 (Version 11.5)
+3. Microsoft Edge (Version 44.17763.1.0)
+4. Internet Explorer 11 (Version 11.615.17763.0)
+
+I tested the web application on the above web browsers. There were no issues with Chrome  or Edge.
+
+Internet Exployer did have difficulties with button functionality. Further investigation didn't find what the cause of this was. It was thought that maybe the security level of the browser was too severe, but that was not the case, as active scripting was already enabled in the security settings.
+
+Mozilla Firefox did load the web application correctly, and basic functionality was OK, however the only aspect that wasn't working was any of the sound effects. chccking the console for errors, I found: "HTTP “Content-Type” of “video/3gpp” is not supported. Load of media resource https://haydal810.github.io/Milestone-Project-2/assets/audio/filename.mp3 failed."
+These issues with other browers have not been addressed yet.
+
+
 
 ### Below are the list of websites I used to test my html and css code:
 
@@ -119,12 +130,9 @@ The game...
 #### As a new User (older child/sibling or adult/parent) to the web application, I want to be able to know that this web application is somewhat educational, and that a younger user will get some educational use from it.
 The game...
 
-## Testing
+## Manual Testing
 
 User testing - the game was presented to users of a variety of ages for feedback on UX.
-
-More is needed here...
-
 
 ## Deployment
 
@@ -159,12 +167,13 @@ Further information can be found [here](https://help.github.com/en/articles/clon
 ## Credits
 
 ### Content
-xxxxx
+All text in this project was written by the developer.
 
 
 ### Media
 - The animal pictures used in this site were obtained from: https://www.pexels.com/
 - The background image was sourced from https://www.vectorstock.com/
+- The sound effects were sourced from: https://www.youtube.com/
 
 ### Acknowledgements
 
