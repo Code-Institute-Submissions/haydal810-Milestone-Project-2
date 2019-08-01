@@ -26,13 +26,6 @@
     top: 10px;
 }
 
-/* --Animal Cards Row-- */
-
-.card-row {
-    height: 150px;
-
-}
-
 .fa-paw {
     color: #ecf0f1;
 }
@@ -46,7 +39,6 @@
     padding-top: 10px;
     padding-bottom: 10px;
     
-
 }
 
 .card img {
@@ -55,11 +47,7 @@
 
 }
 
-.col-button {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 50px;
-}
+
 
 /* --Advice Text to appear on smaller devices only-- */
 
@@ -93,4 +81,10 @@
 
 .text-button {
     font-size: 15px;
+}
+
+.col-button {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
