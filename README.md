@@ -1,9 +1,9 @@
-This is my 2nd Milestone Project for Code Institute - Simple Game for Children aged 3 years+
+This is the 2nd Milestone Project for Code Institute - Simple Game for Children (aged 3 years+)
 
 
 # Pick the Animal Game
 
-This is a simple animal association game, where the User must try and match the generated animal sound effect, with one of the the three randomly generated animal cards. There are five rounds, each round generates layout of animal pictures.
+This is a simple animal association game, where the User must try and match the generated animal sound effect, with one of the three randomly generated animal cards. There are five rounds.
 
 ## UX
 
@@ -14,18 +14,16 @@ As a new User (aged 3years +) to the web application, I want to:
 
 * be able to understand how to play the game, and understand the difference between a right and wrong answer easily.
 * to be able to identify the buttons, which should be large, colorful and easy to press when needed.
-* hear Cartoon-like, sound-effects when I play the game, so as to encourage my enjoyment, and keep me using the application for longer.
-* be able to easily identify what each animal is on the animal card, so as to give me an understanding of how the game works.
+* hear cartoon-like, sound-effects when I play the game, so as to encourage my enjoyment, and keep me using the application for longer.
 
 As a new User (older child/sibling or adult/parent) to the web application, I want to:
 
 * be able to understand how to play the game, and be able to easily refer to the instructions so I can explain to the younger user, if needs be, how     to play the game
 * be able to know who created this application.
-* be able to present this web application to a younger child, and know they will be entertained for at least a few minutes! 
 * be able to know that this web application is somewhat educational, and that a younger user will get some educational use from it.
 
 ### Wireframes: 
-* My Wireframes plan can be found in the Wireframes Folder in my github repository:
+* The Wireframes plan can be found in the Wireframes Folder in my github repository:
 [My Wireframe](https://github.com/haydal810/Milestone-Project-2/blob/master/Wireframes/Initial%20Wireframe.jpg)
 
 
@@ -41,7 +39,7 @@ The User Buttons in this application are big, colorful and designed with a child
 The font used is a google font, called "Anton". A visually appealing font, which I found was a nice nod to the old Nintendo font used years ago. Clean and crisp, and easily readable.
 
 ### Sound Effects
-The Sounds that are heard in the application are simple, clear and for a younger user, almost cartoon like, t appeal to the younger user.
+The Sounds that are heard in the application are simple, clear and for a younger user, almost cartoon like, to appeal to the younger user.
 
 
 ### Existing Features
@@ -49,16 +47,14 @@ The Sounds that are heard in the application are simple, clear and for a younger
 
 * How to Play Button - This, when clicked, reveals a hidden div that has text explaining the rules of the game.
 
-* Big Green Button - This button is pressed once to begin the game. It's the only time the button is required until the end of the game, as the game                         automatically flows from one round to the next once the correct picture is selected.
-
-* Big Red Button - This button has a simple function: Restart the game. It has a onclick function that reloads the entire window. 
+* Big Green Button - This button is pressed once to begin the game. It's the only time the button is required until the end of the game, as the game automatically flows from one round to the next once the correct picture is selected.
 
 * Advice text window when device is held in portrait orientation - This is just to advise the user that the game works in landscape only.
 
 ### Features Left to Implement
-* I would like to add more animal pictures and associated animal noises, and increase the rounds from 5 to 10.
-* I would like to introduce a scoreboard, so users can record how well they last played. This would mean, that the user would have to proceed to the next round, even if he selected an incorrect animal card. (Presently, the round doesnt progress until the correct answer is selected)
-* xxx
+* To add more animal pictures and associated animal sounds, and increase the rounds from 5 to 10.
+* To introduce a scoreboard, so users can record how well they last played. This would mean, that the user would have to proceed to the next round, even if he selected an incorrect animal card. (Presently, the round doesnt progress until the correct answer is selected)
+* To have more visual and audio feedback when a correct or incorrect animal card is selected, such as an animation that overlays on top of the game, and appears for a few seconds, before disappearing.
 
 ## Main Technologies Used
 
@@ -76,6 +72,11 @@ The Sounds that are heard in the application are simple, clear and for a younger
 
 ## Testing
 
+### User Testing
+
+User testing - the game was presented to users of a variety of ages for feedback on UX.
+This type of testing was done during the early stages of development. Surprising, the game itself was made to operate simplier, due to feedback that was received from users, especially younger users. Younger users preferred to use just one button, as opposed to three buttons, that were present in earlier iterations of the game.
+
 ### Below are the list of Internet Browsers I used to test the display of the website:
 
 1. Google Chrome (Version 74.0)
@@ -91,8 +92,6 @@ Internet Exployer did have difficulties with button functionality. Further inves
 Mozilla Firefox did load the web application correctly, and basic functionality was OK, however the only aspect that wasn't working was any of the sound effects. chccking the console for errors, I found: "HTTP “Content-Type” of “video/3gpp” is not supported. Load of media resource https://haydal810.github.io/Milestone-Project-2/assets/audio/filename.mp3 failed."
 These issues with other browers have not been addressed yet.
 
-
-
 ### Below are the list of websites I used to test my html and css code:
 
 1. [W3C HTML Validator](https://validator.w3.org/) This is a HTML online validitor.
@@ -103,36 +102,26 @@ These issues with other browers have not been addressed yet.
 
 #### As a new User (aged 3years +) to the web application, I want to be able to understand how to play the game, and be able to easily refer to the instructions so I can explain to the younger user, if needs be, how to play the game
 
-The game...
+The web application is visually easy to look at: Simple Big Button at the bottom, with a suitable Font Awesome Icon, to indicate to the user, its functionality. The animal pictures are clear to see, with no confusion as to what the animal is. The game is designed primarily for mobile devices, although it is responsive on all devices. Audio feedback is present, when a right or wrong card selection is made, making the game more easier to understand. The "how to play" button on the top right hand side of the game, when clicked, gives a brief and concise rundown of how the game is played.
 
 #### As a new User (aged 3years +) to the web application, I want to to be able to identify the buttons, which should be large, colorful and easy to press when needed.
-The game...
+
+The web application has a large green button at the bottom of the screen. This is the only button a user needs to press, to begin the game. As the game progresses, the green button is ghosted, and is no longer required until a new game begins. The game is designed so the next round plays automatically after the selection of the correct animal card.
 
 
 #### As a new User (aged 3years +) to the web application, I want to hear Cartoon-like, sound-effects when I play the game, so as to encourage my enjoyment, and keep me using the application for longer.
 
-The game...
-
-
-#### As a new User (aged 3years +) to the web application, I want to be able to easily identify what each animal is on the animal card, so as to give me an understanding of how the game works.
-The game...
+This web application has sound effets that are easy to hear and give feedback to the user as to why they occured. An incorrect animal card selections gives a slightly negative "alarm-type" sound, whereas a correct animal card selection gives the user an "applause" sound effect, which is designed to reward the user for getting it right. 
 
 
 #### As a new User (older child/sibling or adult/parent) to the web application, I want to be able to understand how to play the game, and be able to easily refer to the instructions so I can explain to the younger user, if needs be, how to play the game
-The game...
+The game has a button on the top right hand side of the window. Once clicked it gives a brief outline of how the game is played, along with a "start game" button at the bottom of the window, which will start the game again.
 
 #### As a new User (older child/sibling or adult/parent) to the web application, I want to be able to know who created this application.
-The game...
-
-#### As a new User (older child/sibling or adult/parent) to the web application, I want to be able to present this web application to a younger child, and know they will be entertained for at least a few minutes! 
-The game...
+The game has a title on the top left hand side. In the title, the is a link attached the the name of the designer. This brings the user to the designers LinkedIn page, where additional info can be sought.
 
 #### As a new User (older child/sibling or adult/parent) to the web application, I want to be able to know that this web application is somewhat educational, and that a younger user will get some educational use from it.
-The game...
-
-## Manual Testing
-
-User testing - the game was presented to users of a variety of ages for feedback on UX.
+The game is centered around everyday animals and the sounds they make. It is envisaged that a young user will learn what animals make which sound, thereby educating them.
 
 ## Deployment
 
