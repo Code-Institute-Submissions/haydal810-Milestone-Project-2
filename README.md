@@ -84,18 +84,19 @@ This type of testing was done during the early stages of development. Surprising
 3. Microsoft Edge (Version 44.17763.1.0)
 4. Internet Explorer 11 (Version 11.615.17763.0)
 
-I tested the web application on the above web browsers. There were no issues with Chrome  or Edge.
+I tested the web application on the above web browsers. There were no issues with Google Chrome or Microsoft Edge.
 
 Internet Exployer did have difficulties with button functionality. Further investigation didn't find what the cause of this was. It was thought that maybe the security level of the browser was too severe, but that was not the case, as active scripting was already enabled in the security settings.
 
-Mozilla Firefox did load the web application correctly, and basic functionality was OK, however the only aspect that wasn't working was any of the sound effects. chccking the console for errors, I found: "HTTP “Content-Type” of “video/3gpp” is not supported. Load of media resource https://haydal810.github.io/Milestone-Project-2/assets/audio/filename.mp3 failed."
-These issues with other browers have not been addressed yet.
+Mozilla Firefox did load the web application correctly, and basic functionality was OK, however the only aspect that wasn't working was any of the sound effects. Checking the console for errors, I found: "HTTP “Content-Type” of “video/3gpp” is not supported. Load of media resource https://haydal810.github.io/Milestone-Project-2/assets/audio/filename.mp3 failed."
+These issues with other browsers have not been addressed yet.
 
-### Below are the list of websites I used to test my html and css code:
+### Below are the list of websites I used to test the HTML, CSS and JS code:
 
 1. [W3C HTML Validator](https://validator.w3.org/) This is a HTML online validitor.
 2. [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) This is a CSS online validitor.
 3. [CSS Lint](http://csslint.net/) CSS Lint is an open source CSS code quality tool I used.
+4. [JS Lint](https://www.jslint.com/)
 
 #### Meeting the needs of the user stories (as described in the UX section of this README file)
 
