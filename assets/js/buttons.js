@@ -142,12 +142,19 @@ function randomShuffle() {
 		// set card value for each card, from the array:
 
 		cards.forEach(card => {
-			let value = arr[Math.floor(Math.random() * arr.length)];
+			let index = Math.floor(Math.random() * arr.length);
+			let value = arr[index];
 			card.innerText = value;
 			card.dataset.answer = value;
 			card.innerHTML = value;
+			
+			// remove animal from array
+			arr.splice(index, 1);
+
 
 		});
+
+
 
 		// assign the current Answer from one of the cards dataset values
 
