@@ -150,11 +150,7 @@ function randomShuffle() {
 			
 			// remove animal from array
 			arr.splice(index, 1);
-
-
 		});
-
-
 
 		// assign the current Answer from one of the cards dataset values
 
